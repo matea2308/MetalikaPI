@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f90a467ac444430a255c50e9b20e0d0" Name="Diagram1">
+        <EntityTypeShape EntityType="DBModel.izdatnica" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.jedinica_mjere" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.korisnik" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.materijal" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.poslovni_partner" Width="1.5" PointX="1.5" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.primka" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.proizvod" Width="1.5" PointX="6" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.projekt" Width="1.5" PointX="3.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.radni_nalog" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.stanje_skladista" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.stavke_izdatnice" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.stavke_naloga" Width="1.5" PointX="8.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.stavke_primke" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.tip_korisnika" Width="1.5" PointX="1.5" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.izdatnica_korisnik_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.izdatnica_nalog_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stanje_izdatnica_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stavke_izd_izdatnica_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.jed_mjere_materijal_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.korisnik_tip_korisnika_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.nalog_zaposlenik_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.primka_korisnik_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.projekt_zaposlenik_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stanje_materijal_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stavke_izd_materijal_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stavke_materijal_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stavke_nal_materijal_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.primka_partner_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.projekt_partner_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stanje_primka_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stavke_primka_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.proizvod_projekt_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.nalog_projekt_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.stavke_nalog_fk" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBModel.stanje_skladista_pogled" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7048AF1-0148-430A-8773-43684A8C7282}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Metalika</RootNamespace>
+    <AssemblyName>Metalika</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Prezentacijski_sloj\m_logo_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EncryptString">
+      <HintPath>..\..\EncryptString\EncryptString\bin\Release\EncryptString.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hash, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hash.2.0.1\lib\Hash.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Podatkovni_sloj\izdatnica.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\jedinica_mjere.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\Konstante.cs" />
+    <Compile Include="Podatkovni_sloj\korisnik.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\materijal.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\poslovni_partner.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\primka.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\proizvod.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\projekt.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\radni_nalog.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\stanje_skladista.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\stanje_skladista_pogled.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\stavke_izdatnice.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\stavke_naloga.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\stavke_primke.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Podatkovni_sloj\tip_korisnika.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmStanjeSkladista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmStanjeSkladista.Designer.cs">
+      <DependentUpon>FrmStanjeSkladista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmPrimka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmPrimka.Designer.cs">
+      <DependentUpon>FrmPrimka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmKatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmKatalog.Designer.cs">
+      <DependentUpon>FrmKatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmRadniNalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmRadniNalog.Designer.cs">
+      <DependentUpon>FrmRadniNalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmIzdatnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmIzdatnica.Designer.cs">
+      <DependentUpon>FrmIzdatnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmMaterijal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmMaterijal.Designer.cs">
+      <DependentUpon>FrmMaterijal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmPocetna.Designer.cs">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmJedMjere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmJedMjere.Designer.cs">
+      <DependentUpon>FrmJedMjere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajPrimku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajPrimku.Designer.cs">
+      <DependentUpon>FrmUrediDodajPrimku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajIzdatnicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajIzdatnicu.Designer.cs">
+      <DependentUpon>FrmUrediDodajIzdatnicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuPrimke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuPrimke.Designer.cs">
+      <DependentUpon>FrmUrediDodajStavkuPrimke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuIzdatnice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuIzdatnice.Designer.cs">
+      <DependentUpon>FrmUrediDodajStavkuIzdatnice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuNaloga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuNaloga.Designer.cs">
+      <DependentUpon>FrmUrediDodajStavkuNaloga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajRadniNalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajRadniNalog.Designer.cs">
+      <DependentUpon>FrmUrediDodajRadniNalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajMaterijal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajMaterijal.Designer.cs">
+      <DependentUpon>FrmUrediDodajMaterijal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajJedinicu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajJedinicu.Designer.cs">
+      <DependentUpon>FrmUrediDodajJedinicu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmUrediDodajTip.Designer.cs">
+      <DependentUpon>FrmUrediDodajTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmTipKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmTipKorisnika.Designer.cs">
+      <DependentUpon>FrmTipKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmKorisnik.Designer.cs">
+      <DependentUpon>FrmKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmRegistracija.Designer.cs">
+      <DependentUpon>FrmRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmPromjenaZaporke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmPromjenaZaporke.Designer.cs">
+      <DependentUpon>FrmPromjenaZaporke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prezentacijski_sloj\Forme\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sloj_poslovne_logike\DobavljacLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\PrimkaLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\JedinicaMjereLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\MaterijalLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\ProizvodLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\IzdatnicaLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\ProjektLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\StanjeSkladistaLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\RadniNalogLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\TipKorisnikaLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\KorisnikLogika.cs" />
+    <Compile Include="Sloj_poslovne_logike\LoginLogika.cs" />
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmStanjeSkladista.resx">
+      <DependentUpon>FrmStanjeSkladista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmPrimka.resx">
+      <DependentUpon>FrmPrimka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmKatalog.resx">
+      <DependentUpon>FrmKatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmRadniNalog.resx">
+      <DependentUpon>FrmRadniNalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmIzdatnica.resx">
+      <DependentUpon>FrmIzdatnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmMaterijal.resx">
+      <DependentUpon>FrmMaterijal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmPocetna.resx">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmJedMjere.resx">
+      <DependentUpon>FrmJedMjere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajPrimku.resx">
+      <DependentUpon>FrmUrediDodajPrimku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajIzdatnicu.resx">
+      <DependentUpon>FrmUrediDodajIzdatnicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuPrimke.resx">
+      <DependentUpon>FrmUrediDodajStavkuPrimke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuIzdatnice.resx">
+      <DependentUpon>FrmUrediDodajStavkuIzdatnice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajStavkuNaloga.resx">
+      <DependentUpon>FrmUrediDodajStavkuNaloga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajRadniNalog.resx">
+      <DependentUpon>FrmUrediDodajRadniNalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajMaterijal.resx">
+      <DependentUpon>FrmUrediDodajMaterijal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajJedinicu.resx">
+      <DependentUpon>FrmUrediDodajJedinicu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmUrediDodajTip.resx">
+      <DependentUpon>FrmUrediDodajTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmTipKorisnika.resx">
+      <DependentUpon>FrmTipKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmKorisnik.resx">
+      <DependentUpon>FrmKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmRegistracija.resx">
+      <DependentUpon>FrmRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmPromjenaZaporke.resx">
+      <DependentUpon>FrmPromjenaZaporke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prezentacijski_sloj\Forme\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <EntityDeploy Include="Podatkovni_sloj\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Podatkovni_sloj\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <Content Include="Prezentacijski_sloj\Help\Metalika Help.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Metalika Help.hhp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\O aplikaciji.hhc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.izdatnica.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.jedinica_mjere.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.korisnik.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.materijal.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.primka.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stanje_skladista_pogled.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stavke_izdatnice.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stavke_naloga.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stavke_primke.datasource" />
+    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.tip_korisnika.datasource" />
+    <None Include="Properties\DataSources\Metalika.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Metalika.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Podatkovni_sloj\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Podatkovni_sloj\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\formazalogin.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\izdatnice.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\jedinicemjere.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\katalogproizvoda.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\korisnici.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\materijal.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\m_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\oaplikaciji.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\pocetnaforma.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\primke.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\radninalozi.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\skladiste.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\brisanje_korisnika.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\brisanje_materijala.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\brisanje_stavkeizdatnice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\brisanje_stavkeprimke.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\brsanje_radnog_naloga.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodajizdatnicu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodaj_materijal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodaj_primku.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodaj_stavkeizdatnice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodaj_stavke_radnog_naloga.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodaj_stavkuprimke.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodavanje_jed_mjere.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodavanje_novog_korisnika.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodavanje_novog_tipa_korisnika.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\dodavanje_radnog_naloga.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\enkripcija_sifre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\gantogram2.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\istekla_lozinka.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\izdatnice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\Izvjestaj o zadacima1.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\Izvještaj o budžetu.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\Izvještaj o zadacima2.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\jedinice_mjere.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\katalog_proizvoda.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\korisnici.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\korisnici_obrisi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\login_neispravno.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\materijal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\m_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\naslovnica.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\nova_zaporka.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\Ponuda_narucitelju.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\primka_stavkeprimke.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\Radni_nalozi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\registracija.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\skladiste.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\Terminski plan projekta.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\tipovi_korisnika.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredivanje_tipa_korisnika.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_izdatnicu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_jedinicu_mjere.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_korisnika.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_materijal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_primku.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_stavkeizdatnice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_stavkeprimke.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredi_stavke_naloga.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\Slike\uredjivanje_radnog_naloga.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Help\tipovikorisnika.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Slike\m_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Prezentacijski_sloj\Slike\steel_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Prezentacijski_sloj\m_logo_icon.ico" />
+    <Content Include="Prezentacijski_sloj\Slike\m_logo_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

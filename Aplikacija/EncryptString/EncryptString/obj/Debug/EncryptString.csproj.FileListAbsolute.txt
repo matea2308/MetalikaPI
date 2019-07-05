@@ -1,0 +1,6 @@
+C:\PI_proj\r18017i\Aplikacija\EncryptString\EncryptString\bin\Debug\EncryptString.dll
+C:\PI_proj\r18017i\Aplikacija\EncryptString\EncryptString\bin\Debug\EncryptString.pdb
+C:\PI_proj\r18017i\Aplikacija\EncryptString\EncryptString\obj\Debug\EncryptString.csprojResolveAssemblyReference.cache
+C:\PI_proj\r18017i\Aplikacija\EncryptString\EncryptString\obj\Debug\EncryptString.csproj.CoreCompileInputs.cache
+C:\PI_proj\r18017i\Aplikacija\EncryptString\EncryptString\obj\Debug\EncryptString.dll
+C:\PI_proj\r18017i\Aplikacija\EncryptString\EncryptString\obj\Debug\EncryptString.pdb

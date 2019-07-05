@@ -1,0 +1,7 @@
+﻿namespace Metalika
+{
+    class LoginLogika
+    {
+        
+    }
+}

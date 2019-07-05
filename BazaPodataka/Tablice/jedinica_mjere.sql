@@ -1,0 +1,25 @@
+USE [18017_DB]
+GO
+
+/****** Object:  Table [dbo].[jedinica_mjere]    Script Date: 3.7.2018. 18:00:06 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[jedinica_mjere](
+	[ID_jed_mjere] [varchar](10) NOT NULL,
+	[znacenje] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_jedinica_mjere] PRIMARY KEY CLUSTERED 
+(
+	[ID_jed_mjere] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [znacenje_unq] UNIQUE NONCLUSTERED 
+(
+	[znacenje] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
