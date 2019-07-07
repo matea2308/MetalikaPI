@@ -30,7 +30,7 @@ namespace Metalika
         /// </summary>
         private void OsvjeziStanje()
         {
-            stanjeskladistapogledBindingSource.DataSource = stanjeSkladistaLogika.PrikaziStanje();
+            //stanjeskladistapogledBindingSource.DataSource = stanjeSkladistaLogika.PrikaziStanje();
             lOsvjezeno.Text = DateTime.Now.ToString();
         }
         #endregion

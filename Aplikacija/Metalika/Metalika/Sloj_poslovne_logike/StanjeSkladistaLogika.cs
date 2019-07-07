@@ -6,7 +6,7 @@ namespace Metalika
 {
     class StanjeSkladistaLogika
     {
-        public BindingList<stanje_skladista_pogled> PrikaziStanje()
+        /*public BindingList<stanje_skladista_pogled> PrikaziStanje()
         {
             BindingList<stanje_skladista_pogled> listaMaterijala = null;
             using (var db = new Entities())
@@ -14,6 +14,6 @@ namespace Metalika
                 listaMaterijala = new BindingList<stanje_skladista_pogled>(db.stanje_skladista_pogled.ToList());
             }
             return listaMaterijala;
-        }
+        }*/
     }
 }

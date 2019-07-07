@@ -104,7 +104,7 @@
             // 
             // stanjeskladistapogledBindingSource
             // 
-            this.stanjeskladistapogledBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.stanje_skladista_pogled);
+            //this.stanjeskladistapogledBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.stanje_skladista_pogled);
             // 
             // label1
             // 

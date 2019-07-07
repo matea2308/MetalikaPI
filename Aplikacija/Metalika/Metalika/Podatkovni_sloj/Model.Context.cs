@@ -39,6 +39,5 @@ namespace Metalika.Podatkovni_sloj
         public virtual DbSet<stavke_naloga> stavke_naloga { get; set; }
         public virtual DbSet<stavke_primke> stavke_primke { get; set; }
         public virtual DbSet<tip_korisnika> tip_korisnika { get; set; }
-        public virtual DbSet<stanje_skladista_pogled> stanje_skladista_pogled { get; set; }
     }
 }

@@ -1,4 +1,3 @@
-USE [18017_DB]
 GO
 
 /****** Object:  Trigger [dbo].[Primka_AI]    Script Date: 3.7.2018. 18:07:56 ******/

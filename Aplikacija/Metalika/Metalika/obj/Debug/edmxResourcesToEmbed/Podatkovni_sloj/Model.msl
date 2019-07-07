@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="Entities">
+  <EntityContainerMapping StorageEntityContainer="MetalikaDBModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="izdatnica">
-      <EntityTypeMapping TypeName="DBModel.izdatnica">
+      <EntityTypeMapping TypeName="MetalikaDBModel.izdatnica">
         <MappingFragment StoreEntitySet="izdatnica">
           <ScalarProperty Name="ID_izdatnica" ColumnName="ID_izdatnica" />
           <ScalarProperty Name="datum_izdatnice" ColumnName="datum_izdatnice" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="jedinica_mjere">
-      <EntityTypeMapping TypeName="DBModel.jedinica_mjere">
+      <EntityTypeMapping TypeName="MetalikaDBModel.jedinica_mjere">
         <MappingFragment StoreEntitySet="jedinica_mjere">
           <ScalarProperty Name="ID_jed_mjere" ColumnName="ID_jed_mjere" />
           <ScalarProperty Name="znacenje" ColumnName="znacenje" />
@@ -21,7 +21,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="korisnik">
-      <EntityTypeMapping TypeName="DBModel.korisnik">
+      <EntityTypeMapping TypeName="MetalikaDBModel.korisnik">
         <MappingFragment StoreEntitySet="korisnik">
           <ScalarProperty Name="ID_korisnik" ColumnName="ID_korisnik" />
           <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
@@ -38,7 +38,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="materijal">
-      <EntityTypeMapping TypeName="DBModel.materijal">
+      <EntityTypeMapping TypeName="MetalikaDBModel.materijal">
         <MappingFragment StoreEntitySet="materijal">
           <ScalarProperty Name="ID_materijal" ColumnName="ID_materijal" />
           <ScalarProperty Name="naziv_materijala" ColumnName="naziv_materijala" />
@@ -50,7 +50,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="poslovni_partner">
-      <EntityTypeMapping TypeName="DBModel.poslovni_partner">
+      <EntityTypeMapping TypeName="MetalikaDBModel.poslovni_partner">
         <MappingFragment StoreEntitySet="poslovni_partner">
           <ScalarProperty Name="ID_partner" ColumnName="ID_partner" />
           <ScalarProperty Name="naziv" ColumnName="naziv" />
@@ -61,7 +61,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="primka">
-      <EntityTypeMapping TypeName="DBModel.primka">
+      <EntityTypeMapping TypeName="MetalikaDBModel.primka">
         <MappingFragment StoreEntitySet="primka">
           <ScalarProperty Name="ID_primka" ColumnName="ID_primka" />
           <ScalarProperty Name="datum_primke" ColumnName="datum_primke" />
@@ -72,7 +72,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="proizvod">
-      <EntityTypeMapping TypeName="DBModel.proizvod">
+      <EntityTypeMapping TypeName="MetalikaDBModel.proizvod">
         <MappingFragment StoreEntitySet="proizvod">
           <ScalarProperty Name="ID_proizvod" ColumnName="ID_proizvod" />
           <ScalarProperty Name="naziv_proizvoda" ColumnName="naziv_proizvoda" />
@@ -83,7 +83,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="projekt">
-      <EntityTypeMapping TypeName="DBModel.projekt">
+      <EntityTypeMapping TypeName="MetalikaDBModel.projekt">
         <MappingFragment StoreEntitySet="projekt">
           <ScalarProperty Name="ID_projekt" ColumnName="ID_projekt" />
           <ScalarProperty Name="naziv" ColumnName="naziv" />
@@ -96,7 +96,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="radni_nalog">
-      <EntityTypeMapping TypeName="DBModel.radni_nalog">
+      <EntityTypeMapping TypeName="MetalikaDBModel.radni_nalog">
         <MappingFragment StoreEntitySet="radni_nalog">
           <ScalarProperty Name="ID_nalog" ColumnName="ID_nalog" />
           <ScalarProperty Name="opis_postupka" ColumnName="opis_postupka" />
@@ -108,7 +108,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="stanje_skladista">
-      <EntityTypeMapping TypeName="DBModel.stanje_skladista">
+      <EntityTypeMapping TypeName="MetalikaDBModel.stanje_skladista">
         <MappingFragment StoreEntitySet="stanje_skladista">
           <ScalarProperty Name="ID_stanje_skladista" ColumnName="ID_stanje_skladista" />
           <ScalarProperty Name="ID_materijal" ColumnName="ID_materijal" />
@@ -119,7 +119,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="stavke_izdatnice">
-      <EntityTypeMapping TypeName="DBModel.stavke_izdatnice">
+      <EntityTypeMapping TypeName="MetalikaDBModel.stavke_izdatnice">
         <MappingFragment StoreEntitySet="stavke_izdatnice">
           <ScalarProperty Name="ID_stavka_izdatnice" ColumnName="ID_stavka_izdatnice" />
           <ScalarProperty Name="ID_izdatnica" ColumnName="ID_izdatnica" />
@@ -129,7 +129,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="stavke_naloga">
-      <EntityTypeMapping TypeName="DBModel.stavke_naloga">
+      <EntityTypeMapping TypeName="MetalikaDBModel.stavke_naloga">
         <MappingFragment StoreEntitySet="stavke_naloga">
           <ScalarProperty Name="ID_stavka_naloga" ColumnName="ID_stavka_naloga" />
           <ScalarProperty Name="ID_nalog" ColumnName="ID_nalog" />
@@ -139,7 +139,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="stavke_primke">
-      <EntityTypeMapping TypeName="DBModel.stavke_primke">
+      <EntityTypeMapping TypeName="MetalikaDBModel.stavke_primke">
         <MappingFragment StoreEntitySet="stavke_primke">
           <ScalarProperty Name="ID_stavka_primke" ColumnName="ID_stavka_primke" />
           <ScalarProperty Name="ID_primka" ColumnName="ID_primka" />
@@ -150,21 +150,12 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tip_korisnika">
-      <EntityTypeMapping TypeName="DBModel.tip_korisnika">
+      <EntityTypeMapping TypeName="MetalikaDBModel.tip_korisnika">
         <MappingFragment StoreEntitySet="tip_korisnika">
           <ScalarProperty Name="ID_tip_korisnika" ColumnName="ID_tip_korisnika" />
           <ScalarProperty Name="naziv" ColumnName="naziv" />
           <ScalarProperty Name="opis" ColumnName="opis" />
           <ScalarProperty Name="omogucen" ColumnName="omogucen" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="stanje_skladista_pogled">
-      <EntityTypeMapping TypeName="DBModel.stanje_skladista_pogled">
-        <MappingFragment StoreEntitySet="stanje_skladista_pogled">
-          <ScalarProperty Name="ID_materijal" ColumnName="ID_materijal" />
-          <ScalarProperty Name="trenutno_stanje" ColumnName="trenutno_stanje" />
-          <ScalarProperty Name="naziv_materijala" ColumnName="naziv_materijala" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

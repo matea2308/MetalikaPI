@@ -1,4 +1,3 @@
-USE [18017_DB]
 GO
 
 /****** Object:  Table [dbo].[poslovni_partner]    Script Date: 3.7.2018. 18:01:09 ******/

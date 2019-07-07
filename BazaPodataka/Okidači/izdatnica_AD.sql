@@ -1,4 +1,3 @@
-USE [18017_DB]
 GO
 
 /****** Object:  Trigger [dbo].[Izdatnica_AD]    Script Date: 3.7.2018. 18:06:23 ******/

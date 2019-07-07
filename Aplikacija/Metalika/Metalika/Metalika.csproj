@@ -8,10 +8,27 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Metalika</RootNamespace>
     <AssemblyName>Metalika</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,10 +57,10 @@
       <HintPath>..\..\EncryptString\EncryptString\bin\Release\EncryptString.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Hash, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hash.2.0.1\lib\Hash.dll</HintPath>
@@ -51,6 +68,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -108,9 +128,6 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Podatkovni_sloj\stanje_skladista.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Podatkovni_sloj\stanje_skladista_pogled.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Podatkovni_sloj\stavke_izdatnice.cs">
@@ -357,13 +374,23 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
-    <EntityDeploy Include="Podatkovni_sloj\Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Podatkovni_sloj\Model.edmx.diagram">
+    <Content Include="Podatkovni_sloj\MetalikaDB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Podatkovni_sloj\MetalikaDB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>MetalikaDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Podatkovni_sloj\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
-    </None>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Podatkovni_sloj\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
     <Content Include="Prezentacijski_sloj\Help\Metalika Help.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -373,18 +400,13 @@
     <Content Include="Prezentacijski_sloj\Help\O aplikaciji.hhc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.izdatnica.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.jedinica_mjere.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.korisnik.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.materijal.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.primka.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stanje_skladista_pogled.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stavke_izdatnice.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stavke_naloga.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.stavke_primke.datasource" />
-    <None Include="Properties\DataSources\Metalika.Podatkovni_sloj.tip_korisnika.datasource" />
-    <None Include="Properties\DataSources\Metalika.Properties.Resources.datasource" />
-    <None Include="Properties\DataSources\Metalika.Properties.Settings.datasource" />
+    <EntityDeploy Include="Podatkovni_sloj\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Podatkovni_sloj\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -399,16 +421,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Podatkovni_sloj\Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Podatkovni_sloj\Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
     <Content Include="Prezentacijski_sloj\Help\formazalogin.htm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -610,6 +622,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
