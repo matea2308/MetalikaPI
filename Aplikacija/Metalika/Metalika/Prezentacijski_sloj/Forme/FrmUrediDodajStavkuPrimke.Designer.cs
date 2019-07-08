@@ -34,12 +34,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbCijena = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbKolicina = new System.Windows.Forms.TextBox();
             this.cbMaterijal = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbCijena = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 7;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -62,7 +62,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 8;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -84,9 +84,9 @@
             this.label6.Location = new System.Drawing.Point(5, 162);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 24);
+            this.label6.Size = new System.Drawing.Size(239, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Uredi/dodaj stavku";
+            this.label6.Text = "Update/Add delivery line";
             // 
             // groupBox1
             // 
@@ -96,14 +96,33 @@
             this.groupBox1.Controls.Add(this.tbKolicina);
             this.groupBox1.Controls.Add(this.cbMaterijal);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(223, 10);
+            this.groupBox1.Location = new System.Drawing.Point(239, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(245, 319);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi detalje:";
+            this.groupBox1.Text = "Enter details:";
+            // 
+            // tbCijena
+            // 
+            this.tbCijena.Location = new System.Drawing.Point(5, 115);
+            this.tbCijena.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCijena.Name = "tbCijena";
+            this.tbCijena.Size = new System.Drawing.Size(162, 20);
+            this.tbCijena.TabIndex = 16;
+            this.tbCijena.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 100);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Price";
             // 
             // label1
             // 
@@ -111,9 +130,9 @@
             this.label1.Location = new System.Drawing.Point(8, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Količina";
+            this.label1.Text = "Quantity";
             // 
             // tbKolicina
             // 
@@ -138,35 +157,16 @@
             this.label3.Location = new System.Drawing.Point(5, 24);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Materijal";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Cijena";
-            // 
-            // tbCijena
-            // 
-            this.tbCijena.Location = new System.Drawing.Point(5, 115);
-            this.tbCijena.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCijena.Name = "tbCijena";
-            this.tbCijena.Size = new System.Drawing.Size(162, 20);
-            this.tbCijena.TabIndex = 16;
-            this.tbCijena.Text = "0";
+            this.label3.Text = "Material:";
             // 
             // FrmUrediDodajStavkuPrimke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(477, 457);
+            this.ClientSize = new System.Drawing.Size(490, 457);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnOdustani);
@@ -176,7 +176,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUrediDodajStavkuPrimke";
-            this.Text = "Unesi/dodaj stavku primke";
+            this.Text = "Update/Add delivery line";
             this.Load += new System.EventHandler(this.FrmUrediDodajStavkuPrimke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

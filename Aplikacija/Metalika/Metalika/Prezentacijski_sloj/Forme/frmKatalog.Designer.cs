@@ -62,9 +62,9 @@
             this.label2.Location = new System.Drawing.Point(22, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 24);
+            this.label2.Size = new System.Drawing.Size(155, 24);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Katalog proizvoda";
+            this.label2.Text = "Product catalog";
             // 
             // FrmKatalog
             // 

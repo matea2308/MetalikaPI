@@ -118,7 +118,7 @@ namespace Metalika
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom spremanja izdatnice u bazu (da li ovi podaci već postoje u bazi?)";
+                poruka = "Error occurred while saving issue note (does this user already exist?)";
             }
             finally
             {

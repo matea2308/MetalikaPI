@@ -102,7 +102,7 @@ namespace Metalika
                         db.radni_nalog.Add(noviNalog);
                         db.SaveChanges();
                     }
-                    else MessageBox.Show("Datum završetka ne može biti prije datuma početka!", "Upozorenje", MessageBoxButtons.OK);
+                    else MessageBox.Show("End date can't be before start date!", "Warning", MessageBoxButtons.OK);
                     
                 }
                 else
@@ -119,7 +119,7 @@ namespace Metalika
                     {
                         db.SaveChanges();
                     }
-                    else MessageBox.Show("Datum završetka ne može biti prije datuma početka!", "Upozorenje", MessageBoxButtons.OK);
+                    else MessageBox.Show("End date can't be before start date!", "Warning", MessageBoxButtons.OK);
 
                 }
             }

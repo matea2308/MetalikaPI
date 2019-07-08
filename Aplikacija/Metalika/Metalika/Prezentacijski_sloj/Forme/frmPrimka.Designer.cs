@@ -32,15 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrimka));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvPrimke = new System.Windows.Forms.DataGridView();
-            this.iDprimkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datumprimkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDdobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDzaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.poslovnipartnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stanjeskladistaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stavkeprimkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.primkaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
@@ -52,13 +43,22 @@
             this.btnUrediStavku = new System.Windows.Forms.Button();
             this.btnDodajStavku = new System.Windows.Forms.Button();
             this.dgvStavkePrimke = new System.Windows.Forms.DataGridView();
+            this.stavkeprimkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDprimkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datumprimkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.napomenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDdobavljacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDzaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poslovnipartnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stanjeskladistaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stavkeprimkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDprimkaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDmaterijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.primkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stavkeprimkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrimke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.primkaBindingSource)).BeginInit();
@@ -107,73 +107,6 @@
             this.dgvPrimke.TabIndex = 9;
             this.dgvPrimke.SelectionChanged += new System.EventHandler(this.DgvPrimke_SelectionChanged);
             // 
-            // iDprimkaDataGridViewTextBoxColumn
-            // 
-            this.iDprimkaDataGridViewTextBoxColumn.DataPropertyName = "ID_primka";
-            this.iDprimkaDataGridViewTextBoxColumn.HeaderText = "ID primka";
-            this.iDprimkaDataGridViewTextBoxColumn.Name = "iDprimkaDataGridViewTextBoxColumn";
-            this.iDprimkaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datumprimkeDataGridViewTextBoxColumn
-            // 
-            this.datumprimkeDataGridViewTextBoxColumn.DataPropertyName = "datum_primke";
-            this.datumprimkeDataGridViewTextBoxColumn.HeaderText = "Datum primke";
-            this.datumprimkeDataGridViewTextBoxColumn.Name = "datumprimkeDataGridViewTextBoxColumn";
-            this.datumprimkeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // napomenaDataGridViewTextBoxColumn
-            // 
-            this.napomenaDataGridViewTextBoxColumn.DataPropertyName = "napomena";
-            this.napomenaDataGridViewTextBoxColumn.HeaderText = "Napomena";
-            this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
-            this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDdobavljacDataGridViewTextBoxColumn
-            // 
-            this.iDdobavljacDataGridViewTextBoxColumn.DataPropertyName = "ID_dobavljac";
-            this.iDdobavljacDataGridViewTextBoxColumn.HeaderText = "Dobavljač";
-            this.iDdobavljacDataGridViewTextBoxColumn.Name = "iDdobavljacDataGridViewTextBoxColumn";
-            this.iDdobavljacDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDzaposlenikDataGridViewTextBoxColumn
-            // 
-            this.iDzaposlenikDataGridViewTextBoxColumn.DataPropertyName = "ID_zaposlenik";
-            this.iDzaposlenikDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
-            this.iDzaposlenikDataGridViewTextBoxColumn.Name = "iDzaposlenikDataGridViewTextBoxColumn";
-            this.iDzaposlenikDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // korisnikDataGridViewTextBoxColumn
-            // 
-            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
-            this.korisnikDataGridViewTextBoxColumn.HeaderText = "korisnik";
-            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
-            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
-            this.korisnikDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // poslovnipartnerDataGridViewTextBoxColumn
-            // 
-            this.poslovnipartnerDataGridViewTextBoxColumn.DataPropertyName = "poslovni_partner";
-            this.poslovnipartnerDataGridViewTextBoxColumn.HeaderText = "poslovni_partner";
-            this.poslovnipartnerDataGridViewTextBoxColumn.Name = "poslovnipartnerDataGridViewTextBoxColumn";
-            this.poslovnipartnerDataGridViewTextBoxColumn.ReadOnly = true;
-            this.poslovnipartnerDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // stanjeskladistaDataGridViewTextBoxColumn
-            // 
-            this.stanjeskladistaDataGridViewTextBoxColumn.DataPropertyName = "stanje_skladista";
-            this.stanjeskladistaDataGridViewTextBoxColumn.HeaderText = "stanje_skladista";
-            this.stanjeskladistaDataGridViewTextBoxColumn.Name = "stanjeskladistaDataGridViewTextBoxColumn";
-            this.stanjeskladistaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stanjeskladistaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // stavkeprimkeDataGridViewTextBoxColumn
-            // 
-            this.stavkeprimkeDataGridViewTextBoxColumn.DataPropertyName = "stavke_primke";
-            this.stavkeprimkeDataGridViewTextBoxColumn.HeaderText = "stavke_primke";
-            this.stavkeprimkeDataGridViewTextBoxColumn.Name = "stavkeprimkeDataGridViewTextBoxColumn";
-            this.stavkeprimkeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stavkeprimkeDataGridViewTextBoxColumn.Visible = false;
-            // 
             // primkaBindingSource
             // 
             this.primkaBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.primka);
@@ -190,7 +123,7 @@
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(94, 63);
             this.btnDodaj.TabIndex = 10;
-            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.Text = "Add";
             this.btnDodaj.UseVisualStyleBackColor = false;
             this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
             // 
@@ -204,7 +137,7 @@
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(94, 63);
             this.btnUredi.TabIndex = 11;
-            this.btnUredi.Text = "Uredi";
+            this.btnUredi.Text = "Update";
             this.btnUredi.UseVisualStyleBackColor = false;
             this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
             // 
@@ -214,9 +147,9 @@
             this.label1.Location = new System.Drawing.Point(244, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(127, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Popis primki:";
+            this.label1.Text = "Review all delivery notes:";
             // 
             // btnObrisi
             // 
@@ -225,7 +158,7 @@
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(93, 63);
             this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.Text = "Delete";
             this.btnObrisi.UseVisualStyleBackColor = true;
             this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
             // 
@@ -236,9 +169,9 @@
             this.label2.Location = new System.Drawing.Point(22, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 24);
+            this.label2.Size = new System.Drawing.Size(142, 24);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Primke";
+            this.label2.Text = "Delivery notes";
             // 
             // btnObrišiStavku
             // 
@@ -247,7 +180,7 @@
             this.btnObrišiStavku.Name = "btnObrišiStavku";
             this.btnObrišiStavku.Size = new System.Drawing.Size(93, 63);
             this.btnObrišiStavku.TabIndex = 24;
-            this.btnObrišiStavku.Text = "Obriši";
+            this.btnObrišiStavku.Text = "Delete";
             this.btnObrišiStavku.UseVisualStyleBackColor = true;
             this.btnObrišiStavku.Click += new System.EventHandler(this.BtnObrisiStavku_Click);
             // 
@@ -257,9 +190,9 @@
             this.label3.Location = new System.Drawing.Point(242, 383);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Stavke primke:";
+            this.label3.Text = "Delivery lines:";
             // 
             // btnUrediStavku
             // 
@@ -271,7 +204,7 @@
             this.btnUrediStavku.Name = "btnUrediStavku";
             this.btnUrediStavku.Size = new System.Drawing.Size(94, 63);
             this.btnUrediStavku.TabIndex = 22;
-            this.btnUrediStavku.Text = "Uredi";
+            this.btnUrediStavku.Text = "Update";
             this.btnUrediStavku.UseVisualStyleBackColor = false;
             this.btnUrediStavku.Click += new System.EventHandler(this.BtnUrediStavku_Click);
             // 
@@ -287,7 +220,7 @@
             this.btnDodajStavku.Name = "btnDodajStavku";
             this.btnDodajStavku.Size = new System.Drawing.Size(94, 63);
             this.btnDodajStavku.TabIndex = 21;
-            this.btnDodajStavku.Text = "Dodaj";
+            this.btnDodajStavku.Text = "Add";
             this.btnDodajStavku.UseVisualStyleBackColor = false;
             this.btnDodajStavku.Click += new System.EventHandler(this.BtnDodajStavku_Click);
             // 
@@ -317,6 +250,77 @@
             this.dgvStavkePrimke.Size = new System.Drawing.Size(500, 235);
             this.dgvStavkePrimke.TabIndex = 20;
             // 
+            // stavkeprimkeBindingSource
+            // 
+            this.stavkeprimkeBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.stavke_primke);
+            // 
+            // iDprimkaDataGridViewTextBoxColumn
+            // 
+            this.iDprimkaDataGridViewTextBoxColumn.DataPropertyName = "ID_primka";
+            this.iDprimkaDataGridViewTextBoxColumn.HeaderText = "Delivery note ID";
+            this.iDprimkaDataGridViewTextBoxColumn.Name = "iDprimkaDataGridViewTextBoxColumn";
+            this.iDprimkaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datumprimkeDataGridViewTextBoxColumn
+            // 
+            this.datumprimkeDataGridViewTextBoxColumn.DataPropertyName = "datum_primke";
+            this.datumprimkeDataGridViewTextBoxColumn.HeaderText = "Date of delivery note";
+            this.datumprimkeDataGridViewTextBoxColumn.Name = "datumprimkeDataGridViewTextBoxColumn";
+            this.datumprimkeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // napomenaDataGridViewTextBoxColumn
+            // 
+            this.napomenaDataGridViewTextBoxColumn.DataPropertyName = "napomena";
+            this.napomenaDataGridViewTextBoxColumn.HeaderText = "Remark";
+            this.napomenaDataGridViewTextBoxColumn.Name = "napomenaDataGridViewTextBoxColumn";
+            this.napomenaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDdobavljacDataGridViewTextBoxColumn
+            // 
+            this.iDdobavljacDataGridViewTextBoxColumn.DataPropertyName = "ID_dobavljac";
+            this.iDdobavljacDataGridViewTextBoxColumn.HeaderText = "Supplier";
+            this.iDdobavljacDataGridViewTextBoxColumn.Name = "iDdobavljacDataGridViewTextBoxColumn";
+            this.iDdobavljacDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDzaposlenikDataGridViewTextBoxColumn
+            // 
+            this.iDzaposlenikDataGridViewTextBoxColumn.DataPropertyName = "ID_zaposlenik";
+            this.iDzaposlenikDataGridViewTextBoxColumn.HeaderText = "Employee";
+            this.iDzaposlenikDataGridViewTextBoxColumn.Name = "iDzaposlenikDataGridViewTextBoxColumn";
+            this.iDzaposlenikDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // korisnikDataGridViewTextBoxColumn
+            // 
+            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
+            this.korisnikDataGridViewTextBoxColumn.HeaderText = "User";
+            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
+            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnikDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // poslovnipartnerDataGridViewTextBoxColumn
+            // 
+            this.poslovnipartnerDataGridViewTextBoxColumn.DataPropertyName = "poslovni_partner";
+            this.poslovnipartnerDataGridViewTextBoxColumn.HeaderText = "poslovni_partner";
+            this.poslovnipartnerDataGridViewTextBoxColumn.Name = "poslovnipartnerDataGridViewTextBoxColumn";
+            this.poslovnipartnerDataGridViewTextBoxColumn.ReadOnly = true;
+            this.poslovnipartnerDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // stanjeskladistaDataGridViewTextBoxColumn
+            // 
+            this.stanjeskladistaDataGridViewTextBoxColumn.DataPropertyName = "stanje_skladista";
+            this.stanjeskladistaDataGridViewTextBoxColumn.HeaderText = "stanje_skladista";
+            this.stanjeskladistaDataGridViewTextBoxColumn.Name = "stanjeskladistaDataGridViewTextBoxColumn";
+            this.stanjeskladistaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stanjeskladistaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // stavkeprimkeDataGridViewTextBoxColumn
+            // 
+            this.stavkeprimkeDataGridViewTextBoxColumn.DataPropertyName = "stavke_primke";
+            this.stavkeprimkeDataGridViewTextBoxColumn.HeaderText = "stavke_primke";
+            this.stavkeprimkeDataGridViewTextBoxColumn.Name = "stavkeprimkeDataGridViewTextBoxColumn";
+            this.stavkeprimkeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stavkeprimkeDataGridViewTextBoxColumn.Visible = false;
+            // 
             // iDprimkaDataGridViewTextBoxColumn1
             // 
             this.iDprimkaDataGridViewTextBoxColumn1.DataPropertyName = "ID_primka";
@@ -328,21 +332,21 @@
             // iDmaterijalDataGridViewTextBoxColumn
             // 
             this.iDmaterijalDataGridViewTextBoxColumn.DataPropertyName = "ID_materijal";
-            this.iDmaterijalDataGridViewTextBoxColumn.HeaderText = "Materijal";
+            this.iDmaterijalDataGridViewTextBoxColumn.HeaderText = "Material";
             this.iDmaterijalDataGridViewTextBoxColumn.Name = "iDmaterijalDataGridViewTextBoxColumn";
             this.iDmaterijalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kolicinaDataGridViewTextBoxColumn
             // 
             this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Quantity";
             this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
             this.kolicinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cijenaDataGridViewTextBoxColumn
             // 
             this.cijenaDataGridViewTextBoxColumn.DataPropertyName = "cijena";
-            this.cijenaDataGridViewTextBoxColumn.HeaderText = "Cijena";
+            this.cijenaDataGridViewTextBoxColumn.HeaderText = "Price";
             this.cijenaDataGridViewTextBoxColumn.Name = "cijenaDataGridViewTextBoxColumn";
             this.cijenaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -361,10 +365,6 @@
             this.primkaDataGridViewTextBoxColumn.Name = "primkaDataGridViewTextBoxColumn";
             this.primkaDataGridViewTextBoxColumn.ReadOnly = true;
             this.primkaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // stavkeprimkeBindingSource
-            // 
-            this.stavkeprimkeBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.stavke_primke);
             // 
             // FrmPrimka
             // 
@@ -414,13 +414,8 @@
         private System.Windows.Forms.Button btnUrediStavku;
         private System.Windows.Forms.Button btnDodajStavku;
         private System.Windows.Forms.DataGridView dgvStavkePrimke;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDprimkaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDmaterijalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn materijalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn primkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource stavkeprimkeBindingSource;
+        private System.Windows.Forms.BindingSource primkaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDprimkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumprimkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomenaDataGridViewTextBoxColumn;
@@ -430,6 +425,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn poslovnipartnerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stanjeskladistaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stavkeprimkeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource primkaBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDprimkaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDmaterijalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materijalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primkaDataGridViewTextBoxColumn;
     }
 }

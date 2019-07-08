@@ -55,7 +55,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 13;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -66,7 +66,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 14;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -88,9 +88,9 @@
             this.label6.Location = new System.Drawing.Point(5, 162);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 24);
+            this.label6.Size = new System.Drawing.Size(222, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Uredi/dodaj izdatnicu";
+            this.label6.Text = "Update/Add issue note";
             // 
             // groupBox1
             // 
@@ -111,7 +111,7 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 289);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi detalje:";
+            this.groupBox1.Text = "Enter details:";
             // 
             // dtpDatumIzdatnice
             // 
@@ -137,9 +137,9 @@
             this.label3.Location = new System.Drawing.Point(4, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Zaposlenik";
+            this.label3.Text = "Employee";
             // 
             // cbNalog
             // 
@@ -156,9 +156,9 @@
             this.label4.Location = new System.Drawing.Point(4, 202);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Nalog";
+            this.label4.Text = "Work order";
             // 
             // lIdIzdatnica
             // 
@@ -185,9 +185,9 @@
             this.label2.Location = new System.Drawing.Point(4, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Napomena";
+            this.label2.Text = "Remark";
             // 
             // label1
             // 
@@ -195,9 +195,9 @@
             this.label1.Location = new System.Drawing.Point(4, 124);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Datum izdatnice";
+            this.label1.Text = "Issue note date";
             // 
             // tbNapomena
             // 
@@ -223,7 +223,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUrediDodajIzdatnicu";
-            this.Text = "Unesi/dodaj izdatnicu";
+            this.Text = "Update/Add issue note";
             this.Load += new System.EventHandler(this.FrmUrediDodajIzdatnicu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

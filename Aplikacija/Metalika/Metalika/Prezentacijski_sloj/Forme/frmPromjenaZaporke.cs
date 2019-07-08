@@ -72,18 +72,18 @@ namespace Metalika
                         db.SaveChanges();
                     }
                 }
-                else poruka = "Zaporke se ne podudaraju!";
+                else poruka = "passwords don't match!";
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom ažuriranja zaporke. Provjerite Vašu vezu sa internetom!";
+                poruka = "Error occurred during password update. Please check your internet connection!";
             }
             finally
             {
                 if (!string.IsNullOrWhiteSpace(poruka)) MessageBox.Show(poruka);
                 else
                 {
-                    MessageBox.Show("Zaporka ažurirana!", "Obavijest", MessageBoxButtons.OK);
+                    MessageBox.Show("Password updated!", "Notification", MessageBoxButtons.OK);
                     Close();
                 }
             }

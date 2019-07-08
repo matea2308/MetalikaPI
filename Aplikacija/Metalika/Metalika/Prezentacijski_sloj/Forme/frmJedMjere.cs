@@ -84,7 +84,7 @@ namespace Metalika
         {
             if (jedinicamjereBindingSource.Current is jedinica_mjere oznaceni)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu jedinicu mjere ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete the selected unit of measure? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {
@@ -96,6 +96,11 @@ namespace Metalika
                 OsvjeziJedMjere();
             }
         }
-        #endregion   
+        #endregion
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

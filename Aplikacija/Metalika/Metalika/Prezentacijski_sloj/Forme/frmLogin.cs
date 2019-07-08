@@ -105,7 +105,7 @@ namespace Metalika
                 {
                     bool korisnik = db.korisnik.Where(x => x.korisnicko_ime.Equals(tbKorIme.Text)).Any();
 
-                    if (!korisnik) MessageBox.Show("Neispravan unos korisničkog imena/lozinke!", "Napomena", MessageBoxButtons.OK);
+                    if (!korisnik) MessageBox.Show("Invalid user name/password!", "Remark", MessageBoxButtons.OK);
                     else
                     {
                         // dohvaćamo lozinku iz baze za korisničko ime koje smo proslijedili te ako je lozinka "blank"
@@ -115,11 +115,11 @@ namespace Metalika
                         var omogucen = db.korisnik.Where(x => x.korisnicko_ime.Equals(tbKorIme.Text)).Select(x => x.omogucen).FirstOrDefault();
                         if (omogucen.Equals("N"))
                         {
-                            MessageBox.Show("Korisnik kojim se pokušavate spojiti je onemogućen. Kontaktirajte administratora!", "Upozorenje");
+                            MessageBox.Show("The user you are trying to log in with is currently disabled. Please contact your administrator", "Warning");
                         }
                         else if (string.IsNullOrWhiteSpace(lozinka))
                         {
-                            if (MessageBox.Show("Zaporka trenutnog korisnika je istekla i potrebno ju je promijeniti!", "Napomena", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                            if (MessageBox.Show("The password of the current user has expired and needs to be changed!", "Remark", MessageBoxButtons.OKCancel) == DialogResult.OK)
                             {
                                 FrmPromjenaZaporke forma = new FrmPromjenaZaporke(tbKorIme.Text);
                                 forma.ShowDialog();
@@ -130,7 +130,7 @@ namespace Metalika
                         {
                             string enkriptiranaLozinka = Enkripcija.Enkriptiranje(tbZaporka.Text, Konstante.EnkripcijskiKljuc);
                             uspjesanLogin = db.korisnik.Where(x => x.korisnicko_ime.Equals(tbKorIme.Text) && x.zaporka.Equals(enkriptiranaLozinka)).Any();
-                            if (!uspjesanLogin) MessageBox.Show("Neispravan unos korisničkog imena/lozinke!", "Napomena", MessageBoxButtons.OK);
+                            if (!uspjesanLogin) MessageBox.Show("Invalid user name/password!", "Remark", MessageBoxButtons.OK);
                             else
                             {
                                 FrmMain glavnaForma = new FrmMain(this, tbKorIme.Text);

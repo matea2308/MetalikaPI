@@ -84,7 +84,7 @@ namespace Metalika
         {
             if (materijalBindingSource.Current is materijal oznaceni)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označeni materijal ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete the selected material? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {

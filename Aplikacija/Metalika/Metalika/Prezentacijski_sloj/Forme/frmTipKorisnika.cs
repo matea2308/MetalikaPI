@@ -84,7 +84,7 @@ namespace Metalika
         {           
             if (tipkorisnikaBindingSource.Current is tip_korisnika oznaceni)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu tip korisnika ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete the selected user type? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {

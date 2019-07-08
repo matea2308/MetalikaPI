@@ -53,9 +53,9 @@
             this.label1.Location = new System.Drawing.Point(22, 180);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 23);
+            this.label1.Size = new System.Drawing.Size(84, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Dobrodošao/la,";
+            this.label1.Text = "Welcome";
             // 
             // lPrezimeIme
             // 

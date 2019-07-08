@@ -119,7 +119,7 @@ namespace Metalika
             {
                 if (primkaBindingSource.Current is primka oznaceni)
                 {
-                    if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu primku ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to delete the selected delivery note? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         using (var db = new Entities())
                         {
@@ -135,7 +135,7 @@ namespace Metalika
 
             catch (Exception)
             {
-                poruka = "Brisanje primke neuspjelo! Provjerite da li su sve stavke obrisane";
+                poruka = "Deletion of delivery note was not successful! Please check if all delivery lines are deleted";
             }
 
             finally
@@ -188,7 +188,7 @@ namespace Metalika
         {
             if (stavkeprimkeBindingSource.Current is stavke_primke selektiranaStavka)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu stavku primke ?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete selected delivery line ?", "Warning!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {

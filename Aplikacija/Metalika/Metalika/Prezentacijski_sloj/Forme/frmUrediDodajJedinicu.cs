@@ -78,7 +78,7 @@ namespace Metalika
                         {
                             db.SaveChanges();
                         }
-                        else poruka = "ID jedinica mjere i Značenje su obavezna polja!";
+                        else poruka = "ID unit of measure and meaning are mandatory fields!";
                     }
                     else
                     {
@@ -90,14 +90,14 @@ namespace Metalika
                         {
                             db.SaveChanges();
                         }
-                        else poruka = "ID jedinica mjere i Značenje su obavezna polja!";
+                        else poruka = "ID unit of measure and meaning are mandatory fields!";
 
                     }
                 }
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom spremanja jedinice mjere u bazu (da li ovi podaci već postoje u bazi?)";
+                poruka = "Error occurred while saving unit of measure (does this user already exist?)";
             }
             finally
             {
@@ -107,5 +107,10 @@ namespace Metalika
             
         }
         #endregion
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

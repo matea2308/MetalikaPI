@@ -120,7 +120,7 @@ namespace Metalika
             {
                 if (radninalogBindingSource.Current is radni_nalog oznaceni)
                 {
-                    if (MessageBox.Show("Da li ste sigurni da želite izbrisati označeni nalog ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to delete the selected work order? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         using (var db = new Entities())
                         {
@@ -136,8 +136,8 @@ namespace Metalika
 
             catch (Exception ex)
             {
-                if (ex.InnerException == null) poruka = "Brisanje naloga neuspjelo! Provjerite da li su sve stavke obrisane";
-                else poruka = "Brisanje naloga neuspjelo! Provjerite da li se nalog već koristi pri kreiranju izdatnice";
+                if (ex.InnerException == null) poruka = "Deletion of work order was not successful! Please check if all work order lines are deleted";
+                else poruka = "Deleting work order failed! Make sure the work order is already used to create the issue note";
             }
 
             finally
@@ -191,7 +191,7 @@ namespace Metalika
             radni_nalog selektiraniNalog = radninalogBindingSource.Current as radni_nalog;
             if (stavkenalogaBindingSource.Current is stavke_naloga selektiranaStavka)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu stavku nalog?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete selected work order line ?", "Warning!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {

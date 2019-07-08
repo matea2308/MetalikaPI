@@ -88,7 +88,7 @@ namespace Metalika
                             db.tip_korisnika.Add(noviTip);
                             db.SaveChanges();
                         }
-                        else poruka = "Naziv je obavezno polje!";
+                        else poruka = "Type name is mandatory field!";
                     }
                     else
                     {
@@ -101,14 +101,14 @@ namespace Metalika
                         {
                             db.SaveChanges();
                         }
-                        else poruka = "Naziv je obavezno polje!";
+                        else poruka = "Type name is mandatory field!";
 
                     }
                 }
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom spremanja tipa korisnika u bazu (da li ovi podaci već postoje u bazi?)";
+                poruka = "Error occurred while saving user type (does this user already exist?)";
             }
             finally
             {

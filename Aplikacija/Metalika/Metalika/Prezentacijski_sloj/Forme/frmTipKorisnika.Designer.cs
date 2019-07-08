@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipKorisnika));
             this.dgvTipoviKorisnika = new System.Windows.Forms.DataGridView();
-            this.iDtipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.omogucenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipkorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
@@ -43,6 +38,11 @@
             this.btnObrisi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iDtipkorisnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.omogucenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoviKorisnika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipkorisnikaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,42 +74,6 @@
             this.dgvTipoviKorisnika.Size = new System.Drawing.Size(561, 324);
             this.dgvTipoviKorisnika.TabIndex = 9;
             // 
-            // iDtipkorisnikaDataGridViewTextBoxColumn
-            // 
-            this.iDtipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "ID_tip_korisnika";
-            this.iDtipkorisnikaDataGridViewTextBoxColumn.HeaderText = "ID tip korisnika";
-            this.iDtipkorisnikaDataGridViewTextBoxColumn.Name = "iDtipkorisnikaDataGridViewTextBoxColumn";
-            this.iDtipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv tipa";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis tipa";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            this.opisDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // omogucenDataGridViewTextBoxColumn
-            // 
-            this.omogucenDataGridViewTextBoxColumn.DataPropertyName = "omogucen";
-            this.omogucenDataGridViewTextBoxColumn.HeaderText = "Omogućen";
-            this.omogucenDataGridViewTextBoxColumn.Name = "omogucenDataGridViewTextBoxColumn";
-            this.omogucenDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // korisnikDataGridViewTextBoxColumn
-            // 
-            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
-            this.korisnikDataGridViewTextBoxColumn.HeaderText = "korisnik";
-            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
-            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
-            this.korisnikDataGridViewTextBoxColumn.Visible = false;
-            // 
             // tipkorisnikaBindingSource
             // 
             this.tipkorisnikaBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.tip_korisnika);
@@ -126,7 +90,7 @@
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(94, 63);
             this.btnDodaj.TabIndex = 10;
-            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.Text = "Add";
             this.btnDodaj.UseVisualStyleBackColor = false;
             this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
             // 
@@ -140,19 +104,19 @@
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(94, 63);
             this.btnUredi.TabIndex = 11;
-            this.btnUredi.Text = "Uredi";
+            this.btnUredi.Text = "Update";
             this.btnUredi.UseVisualStyleBackColor = false;
             this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 28);
+            this.label1.Location = new System.Drawing.Point(242, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 13);
+            this.label1.Size = new System.Drawing.Size(114, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Postojeći tipovi korisnika:";
+            this.label1.Text = "Existing types of users:";
             // 
             // btnObrisi
             // 
@@ -164,7 +128,7 @@
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(94, 63);
             this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.Text = "Delete";
             this.btnObrisi.UseVisualStyleBackColor = false;
             this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
             // 
@@ -175,9 +139,9 @@
             this.label2.Location = new System.Drawing.Point(22, 179);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 24);
+            this.label2.Size = new System.Drawing.Size(98, 24);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Tip korisnika";
+            this.label2.Text = "User type";
             // 
             // pictureBox1
             // 
@@ -189,6 +153,42 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // iDtipkorisnikaDataGridViewTextBoxColumn
+            // 
+            this.iDtipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "ID_tip_korisnika";
+            this.iDtipkorisnikaDataGridViewTextBoxColumn.HeaderText = "User type ID";
+            this.iDtipkorisnikaDataGridViewTextBoxColumn.Name = "iDtipkorisnikaDataGridViewTextBoxColumn";
+            this.iDtipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Type name";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Type description";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            this.opisDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // omogucenDataGridViewTextBoxColumn
+            // 
+            this.omogucenDataGridViewTextBoxColumn.DataPropertyName = "omogucen";
+            this.omogucenDataGridViewTextBoxColumn.HeaderText = "Enabled";
+            this.omogucenDataGridViewTextBoxColumn.Name = "omogucenDataGridViewTextBoxColumn";
+            this.omogucenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // korisnikDataGridViewTextBoxColumn
+            // 
+            this.korisnikDataGridViewTextBoxColumn.DataPropertyName = "korisnik";
+            this.korisnikDataGridViewTextBoxColumn.HeaderText = "korisnik";
+            this.korisnikDataGridViewTextBoxColumn.Name = "korisnikDataGridViewTextBoxColumn";
+            this.korisnikDataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnikDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmTipKorisnika
             // 
@@ -226,11 +226,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource tipkorisnikaBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDtipkorisnikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn omogucenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tipkorisnikaBindingSource;
     }
 }

@@ -99,7 +99,7 @@ namespace Metalika
                             db.materijal.Add(noviMaterijal);
                             db.SaveChanges();
                         }
-                        else poruka = "Naziv materijala, dimenzije i sastav su obavezna polja!";
+                        else poruka = "Material name, dimensions and composition are mandatory fields!";
                     }
                     else
                     {
@@ -115,14 +115,14 @@ namespace Metalika
                         {
                             db.SaveChanges();
                         }
-                        else poruka = "Naziv materijala, dimenzije i sastav su obavezna polja!";
+                        else poruka = "Material name, dimensions and composition are mandatory fields!";
 
                     }
                 }
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom spremanja materijala u bazu (da li ovi podaci već postoje u bazi?)";
+                poruka = "Error occurred while saving material (does this user already exist?)"; ;
             }
             finally
             {

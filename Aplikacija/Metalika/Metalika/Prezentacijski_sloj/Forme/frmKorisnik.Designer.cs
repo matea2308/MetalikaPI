@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKorisnik));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
+            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.iDkorisnikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.korisnickoimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zaporkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +54,6 @@
             this.radninalogDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.primkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projektDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDodaj = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
@@ -106,94 +106,160 @@
             this.dgvKorisnici.Size = new System.Drawing.Size(760, 324);
             this.dgvKorisnici.TabIndex = 9;
             // 
+            // korisnikBindingSource
+            // 
+            this.korisnikBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.korisnik);
+            // 
+            // btnDodaj
+            // 
+            this.btnDodaj.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDodaj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnDodaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDodaj.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodaj.Location = new System.Drawing.Point(245, 378);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(94, 63);
+            this.btnDodaj.TabIndex = 10;
+            this.btnDodaj.Text = "Add";
+            this.btnDodaj.UseVisualStyleBackColor = false;
+            this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
+            // 
+            // btnUredi
+            // 
+            this.btnUredi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUredi.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnUredi.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUredi.Location = new System.Drawing.Point(345, 378);
+            this.btnUredi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUredi.Name = "btnUredi";
+            this.btnUredi.Size = new System.Drawing.Size(94, 63);
+            this.btnUredi.TabIndex = 11;
+            this.btnUredi.Text = "Update";
+            this.btnUredi.UseVisualStyleBackColor = false;
+            this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(244, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Existing users:";
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(443, 378);
+            this.btnObrisi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(93, 63);
+            this.btnObrisi.TabIndex = 14;
+            this.btnObrisi.Text = "Delete";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 180);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 24);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Users";
+            // 
             // iDkorisnikDataGridViewTextBoxColumn
             // 
             this.iDkorisnikDataGridViewTextBoxColumn.DataPropertyName = "ID_korisnik";
-            this.iDkorisnikDataGridViewTextBoxColumn.HeaderText = "ID korisnik";
+            this.iDkorisnikDataGridViewTextBoxColumn.HeaderText = "User ID";
             this.iDkorisnikDataGridViewTextBoxColumn.Name = "iDkorisnikDataGridViewTextBoxColumn";
             this.iDkorisnikDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDkorisnikDataGridViewTextBoxColumn.Width = 76;
+            this.iDkorisnikDataGridViewTextBoxColumn.Width = 68;
             // 
             // korisnickoimeDataGridViewTextBoxColumn
             // 
             this.korisnickoimeDataGridViewTextBoxColumn.DataPropertyName = "korisnicko_ime";
-            this.korisnickoimeDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.korisnickoimeDataGridViewTextBoxColumn.HeaderText = "Username";
             this.korisnickoimeDataGridViewTextBoxColumn.Name = "korisnickoimeDataGridViewTextBoxColumn";
             this.korisnickoimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.korisnickoimeDataGridViewTextBoxColumn.Width = 92;
+            this.korisnickoimeDataGridViewTextBoxColumn.Width = 80;
             // 
             // zaporkaDataGridViewTextBoxColumn
             // 
             this.zaporkaDataGridViewTextBoxColumn.DataPropertyName = "zaporka";
-            this.zaporkaDataGridViewTextBoxColumn.HeaderText = "zaporka";
+            this.zaporkaDataGridViewTextBoxColumn.HeaderText = "Password";
             this.zaporkaDataGridViewTextBoxColumn.Name = "zaporkaDataGridViewTextBoxColumn";
             this.zaporkaDataGridViewTextBoxColumn.ReadOnly = true;
             this.zaporkaDataGridViewTextBoxColumn.Visible = false;
-            this.zaporkaDataGridViewTextBoxColumn.Width = 70;
+            this.zaporkaDataGridViewTextBoxColumn.Width = 78;
             // 
             // datumregistracijeDataGridViewTextBoxColumn
             // 
             this.datumregistracijeDataGridViewTextBoxColumn.DataPropertyName = "datum_registracije";
-            this.datumregistracijeDataGridViewTextBoxColumn.HeaderText = "Datum registracije";
+            this.datumregistracijeDataGridViewTextBoxColumn.HeaderText = "Date of registration";
             this.datumregistracijeDataGridViewTextBoxColumn.Name = "datumregistracijeDataGridViewTextBoxColumn";
             this.datumregistracijeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datumregistracijeDataGridViewTextBoxColumn.Width = 106;
+            this.datumregistracijeDataGridViewTextBoxColumn.Width = 111;
             // 
             // omogucenDataGridViewTextBoxColumn
             // 
             this.omogucenDataGridViewTextBoxColumn.DataPropertyName = "omogucen";
-            this.omogucenDataGridViewTextBoxColumn.HeaderText = "Omogućen";
+            this.omogucenDataGridViewTextBoxColumn.HeaderText = "Enabled";
             this.omogucenDataGridViewTextBoxColumn.Name = "omogucenDataGridViewTextBoxColumn";
             this.omogucenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.omogucenDataGridViewTextBoxColumn.Width = 84;
+            this.omogucenDataGridViewTextBoxColumn.Width = 71;
             // 
             // imeDataGridViewTextBoxColumn
             // 
             this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "Name";
             this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
             this.imeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imeDataGridViewTextBoxColumn.Width = 49;
+            this.imeDataGridViewTextBoxColumn.Width = 60;
             // 
             // prezimeDataGridViewTextBoxColumn
             // 
             this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "Surname";
             this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
             this.prezimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prezimeDataGridViewTextBoxColumn.Width = 69;
+            this.prezimeDataGridViewTextBoxColumn.Width = 74;
             // 
             // datumrodjenjaDataGridViewTextBoxColumn
             // 
             this.datumrodjenjaDataGridViewTextBoxColumn.DataPropertyName = "datum_rodjenja";
-            this.datumrodjenjaDataGridViewTextBoxColumn.HeaderText = "Datum rođenja";
+            this.datumrodjenjaDataGridViewTextBoxColumn.HeaderText = "Date of birth";
             this.datumrodjenjaDataGridViewTextBoxColumn.Name = "datumrodjenjaDataGridViewTextBoxColumn";
             this.datumrodjenjaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.datumrodjenjaDataGridViewTextBoxColumn.Width = 94;
+            this.datumrodjenjaDataGridViewTextBoxColumn.Width = 65;
             // 
             // adresaDataGridViewTextBoxColumn
             // 
             this.adresaDataGridViewTextBoxColumn.DataPropertyName = "adresa";
-            this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
+            this.adresaDataGridViewTextBoxColumn.HeaderText = "Address";
             this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
             this.adresaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.adresaDataGridViewTextBoxColumn.Width = 65;
+            this.adresaDataGridViewTextBoxColumn.Width = 70;
             // 
             // telefonDataGridViewTextBoxColumn
             // 
             this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
-            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "Phone";
             this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
             this.telefonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefonDataGridViewTextBoxColumn.Width = 68;
+            this.telefonDataGridViewTextBoxColumn.Width = 63;
             // 
             // iDtipkorisnikaDataGridViewTextBoxColumn
             // 
             this.iDtipkorisnikaDataGridViewTextBoxColumn.DataPropertyName = "ID_tip_korisnika";
-            this.iDtipkorisnikaDataGridViewTextBoxColumn.HeaderText = "Tip korisnika";
+            this.iDtipkorisnikaDataGridViewTextBoxColumn.HeaderText = "User type";
             this.iDtipkorisnikaDataGridViewTextBoxColumn.Name = "iDtipkorisnikaDataGridViewTextBoxColumn";
             this.iDtipkorisnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDtipkorisnikaDataGridViewTextBoxColumn.Width = 85;
+            this.iDtipkorisnikaDataGridViewTextBoxColumn.Width = 71;
             // 
             // izdatnicaDataGridViewTextBoxColumn
             // 
@@ -240,72 +306,6 @@
             this.projektDataGridViewTextBoxColumn.Visible = false;
             this.projektDataGridViewTextBoxColumn.Width = 64;
             // 
-            // korisnikBindingSource
-            // 
-            this.korisnikBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.korisnik);
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDodaj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnDodaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDodaj.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodaj.Location = new System.Drawing.Point(245, 378);
-            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(94, 63);
-            this.btnDodaj.TabIndex = 10;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = false;
-            this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
-            // 
-            // btnUredi
-            // 
-            this.btnUredi.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUredi.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnUredi.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUredi.Location = new System.Drawing.Point(345, 378);
-            this.btnUredi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(94, 63);
-            this.btnUredi.TabIndex = 11;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = false;
-            this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Postojeći korisnici:";
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(443, 378);
-            this.btnObrisi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(93, 63);
-            this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 180);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 24);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Korisnici";
-            // 
             // FrmKorisnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,6 +342,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource korisnikBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDkorisnikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnickoimeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zaporkaDataGridViewTextBoxColumn;
@@ -358,6 +359,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn radninalogDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn primkaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn projektDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource korisnikBindingSource;
     }
 }

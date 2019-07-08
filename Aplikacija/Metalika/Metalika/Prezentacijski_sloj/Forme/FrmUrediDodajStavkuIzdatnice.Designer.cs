@@ -49,7 +49,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 7;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -60,7 +60,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 8;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -82,9 +82,9 @@
             this.label6.Location = new System.Drawing.Point(5, 162);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 24);
+            this.label6.Size = new System.Drawing.Size(215, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Uredi/dodaj stavku";
+            this.label6.Text = "Update/Add issue line";
             // 
             // groupBox1
             // 
@@ -99,7 +99,7 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 319);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi detalje:";
+            this.groupBox1.Text = "Enter details:";
             // 
             // label1
             // 
@@ -107,9 +107,9 @@
             this.label1.Location = new System.Drawing.Point(8, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Količina";
+            this.label1.Text = "Quantity";
             // 
             // tbKolicina
             // 
@@ -134,9 +134,9 @@
             this.label3.Location = new System.Drawing.Point(5, 24);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Materijal";
+            this.label3.Text = "Material";
             // 
             // FrmUrediDodajStavkuIzdatnice
             // 
@@ -153,7 +153,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUrediDodajStavkuIzdatnice";
-            this.Text = "Unesi/dodaj stavku izdatnice";
+            this.Text = "Update/Add issue line";
             this.Load += new System.EventHandler(this.FrmUrediDodajStavkuIzdatnice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

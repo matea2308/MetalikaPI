@@ -44,7 +44,7 @@
             // 
             this.pictureBox1.Image = global::Metalika.Properties.Resources.m_logo;
             this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -57,14 +57,14 @@
             this.label1.Location = new System.Drawing.Point(9, 166);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nova zaporka";
+            this.label1.Text = "New password";
             // 
             // tbNovaZaporka
             // 
             this.tbNovaZaporka.Location = new System.Drawing.Point(9, 182);
-            this.tbNovaZaporka.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNovaZaporka.Margin = new System.Windows.Forms.Padding(2);
             this.tbNovaZaporka.Name = "tbNovaZaporka";
             this.tbNovaZaporka.PasswordChar = '*';
             this.tbNovaZaporka.Size = new System.Drawing.Size(162, 20);
@@ -77,14 +77,14 @@
             this.label3.Location = new System.Drawing.Point(9, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Potvrdi zaporku";
+            this.label3.Text = "Confirm the password";
             // 
             // tbPotvrdiZaporku
             // 
             this.tbPotvrdiZaporku.Location = new System.Drawing.Point(9, 219);
-            this.tbPotvrdiZaporku.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPotvrdiZaporku.Margin = new System.Windows.Forms.Padding(2);
             this.tbPotvrdiZaporku.Name = "tbPotvrdiZaporku";
             this.tbPotvrdiZaporku.PasswordChar = '*';
             this.tbPotvrdiZaporku.Size = new System.Drawing.Size(162, 20);
@@ -94,29 +94,29 @@
             // btnSpremiPromjene
             // 
             this.btnSpremiPromjene.Location = new System.Drawing.Point(11, 268);
-            this.btnSpremiPromjene.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSpremiPromjene.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(76, 32);
             this.btnSpremiPromjene.TabIndex = 7;
-            this.btnSpremiPromjene.Text = "Spremi";
+            this.btnSpremiPromjene.Text = "Save";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
             // btnOdustani
             // 
             this.btnOdustani.Location = new System.Drawing.Point(98, 268);
-            this.btnOdustani.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 8;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
             // pZaporke
             // 
             this.pZaporke.Location = new System.Drawing.Point(186, 202);
-            this.pZaporke.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pZaporke.Margin = new System.Windows.Forms.Padding(2);
             this.pZaporke.Name = "pZaporke";
             this.pZaporke.Size = new System.Drawing.Size(26, 24);
             this.pZaporke.TabIndex = 14;
@@ -137,9 +137,9 @@
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPromjenaZaporke";
-            this.Text = "Promjena zaporke";
+            this.Text = "Change password";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

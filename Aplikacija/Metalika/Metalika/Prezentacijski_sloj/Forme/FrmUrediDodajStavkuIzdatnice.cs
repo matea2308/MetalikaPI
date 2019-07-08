@@ -88,7 +88,7 @@ namespace Metalika
                             db.stavke_izdatnice.Add(novaStavka);
                             db.SaveChanges();
                         }
-                        else poruka = "Količina mora biti unešena!";
+                        else poruka = "Quantity is mandatory field!";
                     }
                     else
                     {
@@ -101,13 +101,13 @@ namespace Metalika
                         {
                             db.SaveChanges();
                         }
-                        else poruka = "Količina mora biti unešena!";
+                        else poruka = "Quantity is mandatory field!";
                     }
                 }
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom spremanja stavke izdatnice u bazu (da li ovi podaci već postoje u bazi?)";
+                poruka = "Error occurred while saving issue line (does this user already exist?)"; ;
             }
             finally
             {

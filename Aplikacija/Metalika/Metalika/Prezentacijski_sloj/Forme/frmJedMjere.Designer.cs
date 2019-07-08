@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmJedMjere));
             this.dgvJediniceMjere = new System.Windows.Forms.DataGridView();
-            this.iDjedmjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.znacenjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jedinicamjereBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnUredi = new System.Windows.Forms.Button();
@@ -41,6 +38,9 @@
             this.btnObrisi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iDjedmjereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.znacenjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJediniceMjere)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jedinicamjereBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,28 +70,6 @@
             this.dgvJediniceMjere.Size = new System.Drawing.Size(459, 324);
             this.dgvJediniceMjere.TabIndex = 9;
             // 
-            // iDjedmjereDataGridViewTextBoxColumn
-            // 
-            this.iDjedmjereDataGridViewTextBoxColumn.DataPropertyName = "ID_jed_mjere";
-            this.iDjedmjereDataGridViewTextBoxColumn.HeaderText = "ID jedinica mjere";
-            this.iDjedmjereDataGridViewTextBoxColumn.Name = "iDjedmjereDataGridViewTextBoxColumn";
-            this.iDjedmjereDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // znacenjeDataGridViewTextBoxColumn
-            // 
-            this.znacenjeDataGridViewTextBoxColumn.DataPropertyName = "znacenje";
-            this.znacenjeDataGridViewTextBoxColumn.HeaderText = "Značenje";
-            this.znacenjeDataGridViewTextBoxColumn.Name = "znacenjeDataGridViewTextBoxColumn";
-            this.znacenjeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materijalDataGridViewTextBoxColumn
-            // 
-            this.materijalDataGridViewTextBoxColumn.DataPropertyName = "materijal";
-            this.materijalDataGridViewTextBoxColumn.HeaderText = "materijal";
-            this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
-            this.materijalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materijalDataGridViewTextBoxColumn.Visible = false;
-            // 
             // jedinicamjereBindingSource
             // 
             this.jedinicamjereBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.jedinica_mjere);
@@ -108,7 +86,7 @@
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(94, 63);
             this.btnDodaj.TabIndex = 10;
-            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.Text = "Add";
             this.btnDodaj.UseVisualStyleBackColor = false;
             this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
             // 
@@ -122,7 +100,7 @@
             this.btnUredi.Name = "btnUredi";
             this.btnUredi.Size = new System.Drawing.Size(94, 63);
             this.btnUredi.TabIndex = 11;
-            this.btnUredi.Text = "Uredi";
+            this.btnUredi.Text = "Update";
             this.btnUredi.UseVisualStyleBackColor = false;
             this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
             // 
@@ -132,9 +110,9 @@
             this.label1.Location = new System.Drawing.Point(244, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Jedinice mjere:";
+            this.label1.Text = "Units of measure:";
             // 
             // btnObrisi
             // 
@@ -146,7 +124,7 @@
             this.btnObrisi.Name = "btnObrisi";
             this.btnObrisi.Size = new System.Drawing.Size(94, 63);
             this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obriši";
+            this.btnObrisi.Text = "Delete";
             this.btnObrisi.UseVisualStyleBackColor = false;
             this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
             // 
@@ -157,9 +135,10 @@
             this.label2.Location = new System.Drawing.Point(22, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 24);
+            this.label2.Size = new System.Drawing.Size(166, 24);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Jedinice mjere";
+            this.label2.Text = "Units of measure";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -171,6 +150,28 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // iDjedmjereDataGridViewTextBoxColumn
+            // 
+            this.iDjedmjereDataGridViewTextBoxColumn.DataPropertyName = "ID_jed_mjere";
+            this.iDjedmjereDataGridViewTextBoxColumn.HeaderText = "Units of measure ID";
+            this.iDjedmjereDataGridViewTextBoxColumn.Name = "iDjedmjereDataGridViewTextBoxColumn";
+            this.iDjedmjereDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // znacenjeDataGridViewTextBoxColumn
+            // 
+            this.znacenjeDataGridViewTextBoxColumn.DataPropertyName = "znacenje";
+            this.znacenjeDataGridViewTextBoxColumn.HeaderText = "Meaning";
+            this.znacenjeDataGridViewTextBoxColumn.Name = "znacenjeDataGridViewTextBoxColumn";
+            this.znacenjeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materijalDataGridViewTextBoxColumn
+            // 
+            this.materijalDataGridViewTextBoxColumn.DataPropertyName = "materijal";
+            this.materijalDataGridViewTextBoxColumn.HeaderText = "materijal";
+            this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
+            this.materijalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.materijalDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmJedMjere
             // 
@@ -208,9 +209,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource jedinicamjereBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDjedmjereDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn znacenjeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn materijalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource jedinicamjereBindingSource;
     }
 }

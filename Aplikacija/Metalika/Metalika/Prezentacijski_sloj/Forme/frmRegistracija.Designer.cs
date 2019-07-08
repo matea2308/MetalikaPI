@@ -69,9 +69,9 @@
             this.label1.Location = new System.Drawing.Point(4, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Zaporka";
+            this.label1.Text = "Password";
             // 
             // tbNovaZaporka
             // 
@@ -89,9 +89,9 @@
             this.label3.Location = new System.Drawing.Point(4, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.Size = new System.Drawing.Size(108, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Potvrdi zaporku";
+            this.label3.Text = "Confirm the password";
             // 
             // tbPotvrdiZaporku
             // 
@@ -110,7 +110,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 21;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -121,7 +121,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 22;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -131,9 +131,9 @@
             this.label2.Location = new System.Drawing.Point(4, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Korisničko ime";
+            this.label2.Text = "Username";
             // 
             // tbKorisnickoIme
             // 
@@ -149,9 +149,9 @@
             this.label4.Location = new System.Drawing.Point(4, 132);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Tip korisnika";
+            this.label4.Text = "User type";
             // 
             // cbTipKorisnika
             // 
@@ -184,7 +184,7 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 222);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi korisničke podatke:";
+            this.groupBox1.Text = "Enter user data:";
             // 
             // pZaporke
             // 
@@ -231,9 +231,9 @@
             this.label11.Location = new System.Drawing.Point(4, 177);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.Size = new System.Drawing.Size(123, 13);
             this.label11.TabIndex = 9;
-            this.label11.Text = "Omogucen";
+            this.label11.Text = "Enabled (D - yes, N - no)";
             // 
             // groupBox2
             // 
@@ -254,7 +254,7 @@
             this.groupBox2.Size = new System.Drawing.Size(245, 210);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Podaci o zaposleniku:";
+            this.groupBox2.Text = "Employee information:";
             // 
             // tbTelefon
             // 
@@ -270,9 +270,9 @@
             this.label10.Location = new System.Drawing.Point(4, 165);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Telefon";
+            this.label10.Text = "Phone";
             // 
             // tbAdresa
             // 
@@ -288,9 +288,9 @@
             this.label9.Location = new System.Drawing.Point(4, 128);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Adresa";
+            this.label9.Text = "Address";
             // 
             // dtpDatumRodjenja
             // 
@@ -306,9 +306,9 @@
             this.label8.Location = new System.Drawing.Point(4, 92);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.Size = new System.Drawing.Size(65, 13);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Datum rođenja";
+            this.label8.Text = "Date of birth";
             // 
             // tbPrezime
             // 
@@ -324,9 +324,9 @@
             this.label7.Location = new System.Drawing.Point(4, 55);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Prezime";
+            this.label7.Text = "Surname";
             // 
             // tbIme
             // 
@@ -342,9 +342,9 @@
             this.label5.Location = new System.Drawing.Point(4, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Ime";
+            this.label5.Text = "Name";
             // 
             // pictureBox1
             // 
@@ -364,9 +364,9 @@
             this.label6.Location = new System.Drawing.Point(5, 162);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(206, 24);
+            this.label6.Size = new System.Drawing.Size(162, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Registracija korisnika";
+            this.label6.Text = "User registration";
             // 
             // FrmRegistracija
             // 
@@ -384,7 +384,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmRegistracija";
-            this.Text = "Registracija";
+            this.Text = "Register";
             this.Load += new System.EventHandler(this.FrmRegistracija_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

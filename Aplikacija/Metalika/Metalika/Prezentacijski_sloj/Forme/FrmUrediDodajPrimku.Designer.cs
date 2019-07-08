@@ -55,7 +55,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 13;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -66,7 +66,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 14;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -88,9 +88,9 @@
             this.label6.Location = new System.Drawing.Point(5, 162);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(187, 24);
+            this.label6.Size = new System.Drawing.Size(246, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Uredi/dodaj primku";
+            this.label6.Text = "Update/Add delivery note";
             // 
             // groupBox1
             // 
@@ -104,14 +104,14 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbNapomena);
-            this.groupBox1.Location = new System.Drawing.Point(223, 10);
+            this.groupBox1.Location = new System.Drawing.Point(246, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(245, 289);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi detalje:";
+            this.groupBox1.Text = "Enter details:";
             // 
             // dtpDatumPrimke
             // 
@@ -137,9 +137,9 @@
             this.label3.Location = new System.Drawing.Point(4, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Zaposlenik";
+            this.label3.Text = "Employee";
             // 
             // cbDobavljac
             // 
@@ -156,9 +156,9 @@
             this.label4.Location = new System.Drawing.Point(4, 202);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Dobavljac";
+            this.label4.Text = "Supplier";
             // 
             // lIdPrimka
             // 
@@ -185,9 +185,9 @@
             this.label2.Location = new System.Drawing.Point(4, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Napomena";
+            this.label2.Text = "Remark";
             // 
             // label1
             // 
@@ -195,9 +195,9 @@
             this.label1.Location = new System.Drawing.Point(4, 124);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Datum primke";
+            this.label1.Text = "Delivery note date";
             // 
             // tbNapomena
             // 
@@ -213,7 +213,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(477, 457);
+            this.ClientSize = new System.Drawing.Size(497, 457);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnOdustani);
@@ -223,7 +223,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUrediDodajPrimku";
-            this.Text = "Unesi/dodaj primku";
+            this.Text = "Update/Add delivery note";
             this.Load += new System.EventHandler(this.FrmUrediDodajPrimku_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

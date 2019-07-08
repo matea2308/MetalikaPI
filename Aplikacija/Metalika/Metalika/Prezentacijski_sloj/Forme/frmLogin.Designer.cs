@@ -49,9 +49,9 @@
             this.label1.Location = new System.Drawing.Point(131, 169);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Korisničko ime";
+            this.label1.Text = "Username";
             // 
             // lblUnesiKorIme
             // 
@@ -60,9 +60,9 @@
             this.lblUnesiKorIme.Location = new System.Drawing.Point(134, 183);
             this.lblUnesiKorIme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUnesiKorIme.Name = "lblUnesiKorIme";
-            this.lblUnesiKorIme.Size = new System.Drawing.Size(154, 13);
+            this.lblUnesiKorIme.Size = new System.Drawing.Size(145, 13);
             this.lblUnesiKorIme.TabIndex = 2;
-            this.lblUnesiKorIme.Text = "* Molimo unesite korisničko ime";
+            this.lblUnesiKorIme.Text = "* Please enter your username";
             // 
             // tbKorIme
             // 
@@ -80,9 +80,9 @@
             this.label3.Location = new System.Drawing.Point(131, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Zaporka";
+            this.label3.Text = "Password";
             // 
             // lblUnesiZaporku
             // 
@@ -91,9 +91,9 @@
             this.lblUnesiZaporku.Location = new System.Drawing.Point(134, 240);
             this.lblUnesiZaporku.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUnesiZaporku.Name = "lblUnesiZaporku";
-            this.lblUnesiZaporku.Size = new System.Drawing.Size(125, 13);
+            this.lblUnesiZaporku.Size = new System.Drawing.Size(144, 13);
             this.lblUnesiZaporku.TabIndex = 5;
-            this.lblUnesiZaporku.Text = "* Molimo unesite zaporku";
+            this.lblUnesiZaporku.Text = "* Please enter your password";
             // 
             // tbZaporka
             // 
@@ -118,7 +118,7 @@
             this.btnUlogirajSe.Name = "btnUlogirajSe";
             this.btnUlogirajSe.Size = new System.Drawing.Size(76, 32);
             this.btnUlogirajSe.TabIndex = 7;
-            this.btnUlogirajSe.Text = "Ulogiraj se";
+            this.btnUlogirajSe.Text = "Log in";
             this.btnUlogirajSe.UseVisualStyleBackColor = false;
             this.btnUlogirajSe.Click += new System.EventHandler(this.BtnUlogirajSe_Click);
             // 
@@ -134,7 +134,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 8;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = false;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -144,20 +144,20 @@
             this.label5.Location = new System.Drawing.Point(116, 336);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 13);
+            this.label5.Size = new System.Drawing.Size(145, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Nemaš korisnički račun?";
+            this.label5.Text = "Don\'t have an account yet ? ";
             // 
             // lblRegistracija
             // 
             this.lblRegistracija.AutoSize = true;
             this.lblRegistracija.ForeColor = System.Drawing.Color.Blue;
-            this.lblRegistracija.Location = new System.Drawing.Point(242, 336);
+            this.lblRegistracija.Location = new System.Drawing.Point(262, 336);
             this.lblRegistracija.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRegistracija.Name = "lblRegistracija";
-            this.lblRegistracija.Size = new System.Drawing.Size(70, 13);
+            this.lblRegistracija.Size = new System.Drawing.Size(73, 13);
             this.lblRegistracija.TabIndex = 10;
-            this.lblRegistracija.Text = "Registriraj se!";
+            this.lblRegistracija.Text = "Register here!";
             this.lblRegistracija.Click += new System.EventHandler(this.LblRegistracija_Click);
             // 
             // pictureBox1

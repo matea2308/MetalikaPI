@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMaterijal));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvMaterijali = new System.Windows.Forms.DataGridView();
+            this.materijalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnUredi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.iDmaterijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivmaterijalaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dimenzijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,12 +49,6 @@
             this.stavkeizdatniceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stavkeprimkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stavkenalogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materijalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDodaj = new System.Windows.Forms.Button();
-            this.btnUredi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterijali)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materijalBindingSource)).BeginInit();
@@ -96,45 +96,111 @@
             this.dgvMaterijali.Size = new System.Drawing.Size(594, 324);
             this.dgvMaterijali.TabIndex = 9;
             // 
+            // materijalBindingSource
+            // 
+            this.materijalBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.materijal);
+            // 
+            // btnDodaj
+            // 
+            this.btnDodaj.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDodaj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnDodaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDodaj.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodaj.Location = new System.Drawing.Point(245, 378);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(94, 63);
+            this.btnDodaj.TabIndex = 10;
+            this.btnDodaj.Text = "Add";
+            this.btnDodaj.UseVisualStyleBackColor = false;
+            this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
+            // 
+            // btnUredi
+            // 
+            this.btnUredi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUredi.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnUredi.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUredi.Location = new System.Drawing.Point(345, 378);
+            this.btnUredi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUredi.Name = "btnUredi";
+            this.btnUredi.Size = new System.Drawing.Size(94, 63);
+            this.btnUredi.TabIndex = 11;
+            this.btnUredi.Text = "Update";
+            this.btnUredi.UseVisualStyleBackColor = false;
+            this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(244, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Overview of materials:";
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(443, 378);
+            this.btnObrisi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(93, 63);
+            this.btnObrisi.TabIndex = 14;
+            this.btnObrisi.Text = "Delete";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 180);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Material";
+            // 
             // iDmaterijalDataGridViewTextBoxColumn
             // 
             this.iDmaterijalDataGridViewTextBoxColumn.DataPropertyName = "ID_materijal";
-            this.iDmaterijalDataGridViewTextBoxColumn.HeaderText = "ID materijal";
+            this.iDmaterijalDataGridViewTextBoxColumn.HeaderText = "Material ID";
             this.iDmaterijalDataGridViewTextBoxColumn.Name = "iDmaterijalDataGridViewTextBoxColumn";
             this.iDmaterijalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nazivmaterijalaDataGridViewTextBoxColumn
             // 
             this.nazivmaterijalaDataGridViewTextBoxColumn.DataPropertyName = "naziv_materijala";
-            this.nazivmaterijalaDataGridViewTextBoxColumn.HeaderText = "Naziv materijala";
+            this.nazivmaterijalaDataGridViewTextBoxColumn.HeaderText = "Title od material";
             this.nazivmaterijalaDataGridViewTextBoxColumn.Name = "nazivmaterijalaDataGridViewTextBoxColumn";
             this.nazivmaterijalaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dimenzijeDataGridViewTextBoxColumn
             // 
             this.dimenzijeDataGridViewTextBoxColumn.DataPropertyName = "dimenzije";
-            this.dimenzijeDataGridViewTextBoxColumn.HeaderText = "Dimenzije";
+            this.dimenzijeDataGridViewTextBoxColumn.HeaderText = "Dimensions";
             this.dimenzijeDataGridViewTextBoxColumn.Name = "dimenzijeDataGridViewTextBoxColumn";
             this.dimenzijeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sastavDataGridViewTextBoxColumn
             // 
             this.sastavDataGridViewTextBoxColumn.DataPropertyName = "sastav";
-            this.sastavDataGridViewTextBoxColumn.HeaderText = "Sastav";
+            this.sastavDataGridViewTextBoxColumn.HeaderText = "Composition";
             this.sastavDataGridViewTextBoxColumn.Name = "sastavDataGridViewTextBoxColumn";
             this.sastavDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dodatneinformacijeDataGridViewTextBoxColumn
             // 
             this.dodatneinformacijeDataGridViewTextBoxColumn.DataPropertyName = "dodatne_informacije";
-            this.dodatneinformacijeDataGridViewTextBoxColumn.HeaderText = "Dodatne informacije";
+            this.dodatneinformacijeDataGridViewTextBoxColumn.HeaderText = "Additional information";
             this.dodatneinformacijeDataGridViewTextBoxColumn.Name = "dodatneinformacijeDataGridViewTextBoxColumn";
             this.dodatneinformacijeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDjedmjereDataGridViewTextBoxColumn
             // 
             this.iDjedmjereDataGridViewTextBoxColumn.DataPropertyName = "ID_jed_mjere";
-            this.iDjedmjereDataGridViewTextBoxColumn.HeaderText = "Jedinica mjere";
+            this.iDjedmjereDataGridViewTextBoxColumn.HeaderText = "Units of measure";
             this.iDjedmjereDataGridViewTextBoxColumn.Name = "iDjedmjereDataGridViewTextBoxColumn";
             this.iDjedmjereDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -178,72 +244,6 @@
             this.stavkenalogaDataGridViewTextBoxColumn.ReadOnly = true;
             this.stavkenalogaDataGridViewTextBoxColumn.Visible = false;
             // 
-            // materijalBindingSource
-            // 
-            this.materijalBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.materijal);
-            // 
-            // btnDodaj
-            // 
-            this.btnDodaj.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDodaj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnDodaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
-            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDodaj.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodaj.Location = new System.Drawing.Point(245, 378);
-            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(94, 63);
-            this.btnDodaj.TabIndex = 10;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = false;
-            this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
-            // 
-            // btnUredi
-            // 
-            this.btnUredi.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUredi.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnUredi.Font = new System.Drawing.Font("Calibri", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUredi.Location = new System.Drawing.Point(345, 378);
-            this.btnUredi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(94, 63);
-            this.btnUredi.TabIndex = 11;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = false;
-            this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Popis materijala";
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(443, 378);
-            this.btnObrisi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(93, 63);
-            this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 180);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 24);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Materijali";
-            // 
             // FrmMaterijal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +280,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource materijalBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDmaterijalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivmaterijalaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dimenzijeDataGridViewTextBoxColumn;
@@ -291,6 +292,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stavkeizdatniceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stavkeprimkeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stavkenalogaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource materijalBindingSource;
     }
 }

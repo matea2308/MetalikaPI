@@ -32,9 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStanjeSkladista));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvPrimke = new System.Windows.Forms.DataGridView();
-            this.nazivmaterijalaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trenutnostanjeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDmaterijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stanjeskladistapogledBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,10 +63,6 @@
             this.dgvPrimke.AutoGenerateColumns = false;
             this.dgvPrimke.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrimke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrimke.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nazivmaterijalaDataGridViewTextBoxColumn,
-            this.trenutnostanjeDataGridViewTextBoxColumn,
-            this.iDmaterijalDataGridViewTextBoxColumn});
             this.dgvPrimke.DataSource = this.stanjeskladistapogledBindingSource;
             this.dgvPrimke.Location = new System.Drawing.Point(247, 43);
             this.dgvPrimke.Margin = new System.Windows.Forms.Padding(2);
@@ -80,41 +73,15 @@
             this.dgvPrimke.Size = new System.Drawing.Size(619, 519);
             this.dgvPrimke.TabIndex = 9;
             // 
-            // nazivmaterijalaDataGridViewTextBoxColumn
-            // 
-            this.nazivmaterijalaDataGridViewTextBoxColumn.DataPropertyName = "naziv_materijala";
-            this.nazivmaterijalaDataGridViewTextBoxColumn.HeaderText = "Materijal";
-            this.nazivmaterijalaDataGridViewTextBoxColumn.Name = "nazivmaterijalaDataGridViewTextBoxColumn";
-            this.nazivmaterijalaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // trenutnostanjeDataGridViewTextBoxColumn
-            // 
-            this.trenutnostanjeDataGridViewTextBoxColumn.DataPropertyName = "trenutno_stanje";
-            this.trenutnostanjeDataGridViewTextBoxColumn.HeaderText = "Trenutno stanje na skladištu";
-            this.trenutnostanjeDataGridViewTextBoxColumn.Name = "trenutnostanjeDataGridViewTextBoxColumn";
-            this.trenutnostanjeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iDmaterijalDataGridViewTextBoxColumn
-            // 
-            this.iDmaterijalDataGridViewTextBoxColumn.DataPropertyName = "ID_materijal";
-            this.iDmaterijalDataGridViewTextBoxColumn.HeaderText = "ID_materijal";
-            this.iDmaterijalDataGridViewTextBoxColumn.Name = "iDmaterijalDataGridViewTextBoxColumn";
-            this.iDmaterijalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDmaterijalDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // stanjeskladistapogledBindingSource
-            // 
-            //this.stanjeskladistapogledBindingSource.DataSource = typeof(Metalika.Podatkovni_sloj.stanje_skladista_pogled);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(244, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Skladište";
+            this.label1.Text = "Warehouse";
             // 
             // label2
             // 
@@ -123,9 +90,9 @@
             this.label2.Location = new System.Drawing.Point(22, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 24);
+            this.label2.Size = new System.Drawing.Size(176, 24);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Stanje skladišta";
+            this.label2.Text = "Warehouse status";
             // 
             // btnOsvjezi
             // 
@@ -133,7 +100,7 @@
             this.btnOsvjezi.Name = "btnOsvjezi";
             this.btnOsvjezi.Size = new System.Drawing.Size(158, 65);
             this.btnOsvjezi.TabIndex = 17;
-            this.btnOsvjezi.Text = "Osvježi";
+            this.btnOsvjezi.Text = "Refresh";
             this.btnOsvjezi.UseVisualStyleBackColor = true;
             this.btnOsvjezi.Click += new System.EventHandler(this.BtnOsvjezi_Click);
             // 
@@ -142,9 +109,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(26, 219);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Osvježeno:";
+            this.label3.Text = "Updated:";
             // 
             // lOsvjezeno
             // 

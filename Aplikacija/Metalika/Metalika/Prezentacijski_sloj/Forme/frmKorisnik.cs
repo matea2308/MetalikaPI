@@ -83,7 +83,7 @@ namespace Metalika
         {
             if (korisnikBindingSource.Current is korisnik oznaceni)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenog korisnika ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete the selected user ? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {

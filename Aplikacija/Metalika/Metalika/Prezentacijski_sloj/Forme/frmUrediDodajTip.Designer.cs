@@ -52,9 +52,9 @@
             this.label1.Location = new System.Drawing.Point(4, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Opis";
+            this.label1.Text = "Description";
             // 
             // tbOpis
             // 
@@ -72,7 +72,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 9;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -83,7 +83,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 10;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -93,9 +93,9 @@
             this.label2.Location = new System.Drawing.Point(4, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Naziv tipa";
+            this.label2.Text = "Type name";
             // 
             // tbNazivTipa
             // 
@@ -122,7 +122,7 @@
             this.groupBox1.Size = new System.Drawing.Size(245, 263);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi detalje:";
+            this.groupBox1.Text = "Enter details:";
             // 
             // lIdTipKorisnika
             // 
@@ -161,9 +161,9 @@
             this.label5.Location = new System.Drawing.Point(4, 179);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.Size = new System.Drawing.Size(125, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Omogućen (D/N)";
+            this.label5.Text = "Enabled (D - yes /N - no)";
             // 
             // pictureBox1
             // 
@@ -183,9 +183,9 @@
             this.label6.Location = new System.Drawing.Point(5, 162);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 24);
+            this.label6.Size = new System.Drawing.Size(212, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Uredi/dodaj tip";
+            this.label6.Text = "Update/Add user type";
             // 
             // FrmUrediDodajTip
             // 
@@ -202,7 +202,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUrediDodajTip";
-            this.Text = "Uredi/dodaj tip korisnika";
+            this.Text = "Update/Add user type";
             this.Load += new System.EventHandler(this.FrmUrediDodajTip_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

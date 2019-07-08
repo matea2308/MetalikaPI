@@ -119,7 +119,7 @@ namespace Metalika
             {
                 if (izdatnicaBindingSource.Current is izdatnica oznaceni)
                 {
-                    if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu izdatnicu ?", "Upozorenje", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to delete the selected delivery note? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         using (var db = new Entities())
                         {
@@ -134,7 +134,7 @@ namespace Metalika
             }
             catch (Exception)
             { 
-                poruka = "Brisanje izdatnice neuspjelo! Provjerite da li su sve stavke obrisane";
+                poruka = "Deletion of issue note was not successful! Please check if all issue lines are deleted";
             }
             finally
             {
@@ -186,7 +186,7 @@ namespace Metalika
         {
             if (stavkeizdatniceBindingSource.Current is stavke_izdatnice selektiranaStavka)
             {
-                if (MessageBox.Show("Da li ste sigurni da želite izbrisati označenu stavku izdatnice ?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete selected issue line ?", "Upozorenje!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
                     using (var db = new Entities())
                     {

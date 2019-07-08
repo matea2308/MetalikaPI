@@ -151,7 +151,7 @@ namespace Metalika
                             db.korisnik.Add(noviKorisnik);
                             db.SaveChanges();
                         }
-                        else poruka = "Provjerite da li su sva obavezna polja popunjena i da se lozinke podudaraju!";
+                        else poruka = "Make sure all required fields are populated and passwords match!";
                     }
                     else
                     {
@@ -176,14 +176,14 @@ namespace Metalika
                         {
                             db.SaveChanges();
                         }
-                        else poruka = "Provjerite da li su sva obavezna polja popunjena i da se lozinke podudaraju";
+                        else poruka = "Make sure all required fields are populated and passwords match!";
 
                     }
                 }
             }
             catch (Exception)
             {
-                poruka = "Greška prilikom spremanja korisnika u bazu (da li ovi podaci već postoje u bazi?)";
+                poruka = "Error occurred while saving user (does this user already exist?)";
             }
             finally
             {

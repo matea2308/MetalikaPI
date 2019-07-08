@@ -49,7 +49,7 @@
             this.btnSpremiPromjene.Name = "btnSpremiPromjene";
             this.btnSpremiPromjene.Size = new System.Drawing.Size(98, 32);
             this.btnSpremiPromjene.TabIndex = 5;
-            this.btnSpremiPromjene.Text = "Spremi promjene";
+            this.btnSpremiPromjene.Text = "Save changes";
             this.btnSpremiPromjene.UseVisualStyleBackColor = true;
             this.btnSpremiPromjene.Click += new System.EventHandler(this.BtnSpremiPromjene_Click);
             // 
@@ -60,7 +60,7 @@
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(73, 32);
             this.btnOdustani.TabIndex = 6;
-            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.Text = "Cancel";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.BtnOdustani_Click);
             // 
@@ -70,9 +70,9 @@
             this.label2.Location = new System.Drawing.Point(4, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Značenje";
+            this.label2.Text = "Meaning";
             // 
             // tbZnacenje
             // 
@@ -88,14 +88,14 @@
             this.groupBox1.Controls.Add(this.tbIdJedMjere);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbZnacenje);
-            this.groupBox1.Location = new System.Drawing.Point(223, 10);
+            this.groupBox1.Location = new System.Drawing.Point(286, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(245, 263);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi detalje:";
+            this.groupBox1.Text = "Enter details";
             // 
             // lIdJedMjere
             // 
@@ -133,16 +133,17 @@
             this.label6.Location = new System.Drawing.Point(5, 160);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(218, 24);
+            this.label6.Size = new System.Drawing.Size(277, 24);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Uredi/dodaj jed. mjere";
+            this.label6.Text = "Update/add units of measure";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FrmUrediDodajJedinicu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(477, 457);
+            this.ClientSize = new System.Drawing.Size(536, 457);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOdustani);
@@ -152,7 +153,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmUrediDodajJedinicu";
-            this.Text = "Uredi/dodaj jedinicu mjere";
+            this.Text = "Update/add units of measure";
             this.Load += new System.EventHandler(this.FrmUrediDodajJedinicu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
