@@ -37,14 +37,14 @@ namespace Metalika
 
             switch (tipKorisnika)
             {
-                case "ADMIN":
+                case "Admin":
                     miNaslovnica.Visible = true;
                     miKorisnici.Visible = true;
                     miTipoviKorisnika.Visible = true;
                     miKatalog.Visible = true;
                     miJediniceMjere.Visible = true;
                     break;
-                case "SKLADISTAR":
+                case "Warehouse worker":
                     miNaslovnica.Visible = true;
                     miSkladiste.Visible = true;
                     miDokumenti.Visible = true;
@@ -53,12 +53,12 @@ namespace Metalika
                     miMaterijal.Visible = true;
                     miKatalog.Visible = true;
                     break;
-                case "PROJEKTANT":
+                case "Planner":
                     miNaslovnica.Visible = true;
                     miProjekti.Visible = true;
                     miKatalog.Visible = true;
                     break;
-                case "UPR_PROI":
+                case "Production management":
                     miNaslovnica.Visible = true;
                     miProjekti.Visible = true;
                     miSkladiste.Visible = true;
