@@ -8,18 +8,18 @@ As mentioned, this is a sample project and was built as part of a student projec
 
 There are 4 types of users predefined in application: administrator, warehouse worker, planner, production manager. In case you want to connect with sample (already created) users, these are sample users (along with passwords):
 
-## Administartor
+* Administrator
 
-admin / test123
+  * Credentials: admin / test123
 
-## Warehouse worker
+* Warehouse worker
 
-matea / test123
+  * Credentials :matea / test123
 
-## Planner
+* Planner
 
-hans / test123
+  * Credentials: hans / test123
 
-## Production manager
+* Production manager
 
-claudia / test123
+  * Credentials: claudia / test123
