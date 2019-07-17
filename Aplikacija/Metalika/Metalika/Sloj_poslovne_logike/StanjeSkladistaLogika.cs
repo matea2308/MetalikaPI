@@ -9,7 +9,7 @@ namespace Metalika
         /*public BindingList<stanje_skladista_pogled> PrikaziStanje()
         {
             BindingList<stanje_skladista_pogled> listaMaterijala = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaMaterijala = new BindingList<stanje_skladista_pogled>(db.stanje_skladista_pogled.ToList());
             }

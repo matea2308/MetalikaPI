@@ -136,7 +136,6 @@
             this.label6.Size = new System.Drawing.Size(277, 24);
             this.label6.TabIndex = 16;
             this.label6.Text = "Update/add units of measure";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // FrmUrediDodajJedinicu
             // 

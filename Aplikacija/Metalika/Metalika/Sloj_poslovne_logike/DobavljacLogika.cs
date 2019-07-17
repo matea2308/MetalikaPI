@@ -13,7 +13,7 @@ namespace Metalika
         public BindingList<poslovni_partner> PrikaziDobavljace()
         {
             BindingList<poslovni_partner> listaDobavljaca = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaDobavljaca = new BindingList<poslovni_partner>(db.poslovni_partner.ToList());
             }

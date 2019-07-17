@@ -64,7 +64,7 @@ namespace Metalika
             // kod se nalazi unutar try-catch-finally bloka kako bi uspješno detektirali greške kao što su CONSTRAINT Violation
             try
             {
-                using (var db = new Entities())
+                using (var db = new Entities(Konstante.GetConnectionString()))
                 {
                     if (jedinicaMjere == null)
                     {
@@ -107,10 +107,5 @@ namespace Metalika
             
         }
         #endregion
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -14,7 +14,7 @@ namespace Metalika
         public BindingList<projekt> DohvatiListuProjekata()
         {
             BindingList<projekt> listaProjekata = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaProjekata = new BindingList<projekt>(db.projekt.ToList());
             }

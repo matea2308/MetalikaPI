@@ -85,7 +85,7 @@ namespace Metalika
         /// <param name="e"></param>
         private void BtnSpremiPromjene_Click(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 if (radniNalog == null)
                 {

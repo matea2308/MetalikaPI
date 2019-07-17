@@ -14,7 +14,7 @@ namespace Metalika
         public BindingList<jedinica_mjere> PrikaziJediniceMjere()
         {
             BindingList<jedinica_mjere> listaNaloga = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaNaloga = new BindingList<jedinica_mjere>(db.jedinica_mjere.ToList());
             }

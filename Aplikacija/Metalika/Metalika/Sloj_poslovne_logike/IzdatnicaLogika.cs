@@ -9,7 +9,7 @@ namespace Metalika
         public BindingList<izdatnica> PrikaziIzdatnice()
         {
             BindingList<izdatnica> listaIzdatnica = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaIzdatnica = new BindingList<izdatnica>(db.izdatnica.ToList());
             }
@@ -19,7 +19,7 @@ namespace Metalika
         public BindingList<stavke_izdatnice> PrikaziStavkeIzdatnice(izdatnica izdatnica)
         {
             BindingList<stavke_izdatnice> stavkeIzdatnice = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 db.izdatnica.Attach(izdatnica);
                 stavkeIzdatnice = new BindingList<stavke_izdatnice>(izdatnica.stavke_izdatnice.ToList());

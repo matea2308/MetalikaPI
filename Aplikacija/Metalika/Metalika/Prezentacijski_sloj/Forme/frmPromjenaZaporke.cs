@@ -57,7 +57,7 @@ namespace Metalika
             {
                 if (pZaporke.BackColor == Color.Green && !string.IsNullOrWhiteSpace(tbNovaZaporka.Text))
                 {
-                    using (var db = new Entities())
+                    using (var db = new Entities(Konstante.GetConnectionString()))
                     {
                         var trenutniKorisnik = db.korisnik.Where(x => x.korisnicko_ime.Equals(korisnickoIme)).Single();
                         db.korisnik.Attach(trenutniKorisnik);

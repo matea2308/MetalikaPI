@@ -14,7 +14,7 @@ namespace Metalika
         public BindingList<materijal> DohvatiListuMaterijala()
         {
             BindingList<materijal> listaMaterijala = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaMaterijala = new BindingList<materijal>(db.materijal.ToList());
             }

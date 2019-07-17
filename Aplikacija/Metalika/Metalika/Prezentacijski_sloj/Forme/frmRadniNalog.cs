@@ -122,7 +122,7 @@ namespace Metalika
                 {
                     if (MessageBox.Show("Are you sure you want to delete the selected work order? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        using (var db = new Entities())
+                        using (var db = new Entities(Konstante.GetConnectionString()))
                         {
                             db.radni_nalog.Attach(oznaceni);
                             db.radni_nalog.Remove(oznaceni);
@@ -193,7 +193,7 @@ namespace Metalika
             {
                 if (MessageBox.Show("Are you sure you want to delete selected work order line ?", "Warning!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    using (var db = new Entities())
+                    using (var db = new Entities(Konstante.GetConnectionString()))
                     {
                         db.stavke_naloga.Attach(selektiranaStavka);
                         db.stavke_naloga.Remove(selektiranaStavka);

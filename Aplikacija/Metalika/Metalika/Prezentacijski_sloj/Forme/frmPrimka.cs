@@ -121,7 +121,7 @@ namespace Metalika
                 {
                     if (MessageBox.Show("Are you sure you want to delete the selected delivery note? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        using (var db = new Entities())
+                        using (var db = new Entities(Konstante.GetConnectionString()))
                         {
                             db.primka.Attach(oznaceni);
                             db.primka.Remove(oznaceni);
@@ -190,7 +190,7 @@ namespace Metalika
             {
                 if (MessageBox.Show("Are you sure you want to delete selected delivery line ?", "Warning!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    using (var db = new Entities())
+                    using (var db = new Entities(Konstante.GetConnectionString()))
                     {
                         db.stavke_primke.Attach(selektiranaStavka);
                         db.stavke_primke.Remove(selektiranaStavka);

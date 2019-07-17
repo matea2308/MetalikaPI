@@ -14,7 +14,7 @@ namespace Metalika
         public BindingList<proizvod> PrikaziProizvode()
         {
             BindingList<proizvod> listaProizvoda = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaProizvoda = new BindingList<proizvod>(db.proizvod.ToList());
             }

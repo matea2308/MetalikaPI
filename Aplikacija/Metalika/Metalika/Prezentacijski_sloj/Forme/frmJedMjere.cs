@@ -86,7 +86,7 @@ namespace Metalika
             {
                 if (MessageBox.Show("Are you sure you want to delete the selected unit of measure? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    using (var db = new Entities())
+                    using (var db = new Entities(Konstante.GetConnectionString()))
                     {
                         db.jedinica_mjere.Attach(oznaceni);
                         db.jedinica_mjere.Remove(oznaceni);
@@ -98,9 +98,5 @@ namespace Metalika
         }
         #endregion
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

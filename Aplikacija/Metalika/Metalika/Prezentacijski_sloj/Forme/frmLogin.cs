@@ -101,7 +101,7 @@ namespace Metalika
             if(!string.IsNullOrWhiteSpace(tbKorIme.Text) && !string.IsNullOrWhiteSpace(tbZaporka.Text))
             {
                 bool uspjesanLogin = false;
-                using (var db = new Entities())
+                using (var db = new Entities(Konstante.GetConnectionString()))
                 {
                     bool korisnik = db.korisnik.Where(x => x.korisnicko_ime.Equals(tbKorIme.Text)).Any();
 

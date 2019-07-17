@@ -85,7 +85,7 @@ namespace Metalika
             {
                 if (MessageBox.Show("Are you sure you want to delete the selected user ? ", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    using (var db = new Entities())
+                    using (var db = new Entities(Konstante.GetConnectionString()))
                     {
                         db.korisnik.Attach(oznaceni);
                         db.korisnik.Remove(oznaceni);

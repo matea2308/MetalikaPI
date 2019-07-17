@@ -16,7 +16,7 @@ namespace Metalika
         public BindingList<tip_korisnika> DohvatiListuTipovaKorisnika()
         {
             BindingList<tip_korisnika> listaTipova = null;
-            using (var db = new Entities())
+            using (var db = new Entities(Konstante.GetConnectionString()))
             {
                 listaTipova = new BindingList<tip_korisnika>(db.tip_korisnika.ToList());
             }

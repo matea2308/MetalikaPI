@@ -29,7 +29,7 @@ namespace Metalika
         private void PrikaziIzbornik(int idTipKorisnika)
         {
             string tipKorisnika;
-            using(var db = new Entities())
+            using(var db = new Entities(Konstante.GetConnectionString()))
             {
                 var tip = db.tip_korisnika.Where(x => x.ID_tip_korisnika == idTipKorisnika).Single();
                 tipKorisnika = tip.naziv;
@@ -112,7 +112,7 @@ namespace Metalika
         private void FrmMain_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            using(var db = new Entities())
+            using(var db = new Entities(Konstante.GetConnectionString()))
             {
                 korisnik = db.korisnik.Where(x => x.korisnicko_ime.Equals(korIme)).Single();
             }
